@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="Open GPX Tracker for iOS">
+	<wpt lat="40.53308694282939" lon="-105.07843780073746">
+		<ele>1505.5865478515625</ele>
+		<time>2023-02-02T17:01:58Z</time>
+		<name>Blue Credit 3</name>
+		<desc>Blue Credit 3</desc>
+	</wpt>
+	<trk>
+	</trk>
+</gpx>
