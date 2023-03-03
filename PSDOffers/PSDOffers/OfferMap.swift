@@ -6,13 +6,40 @@
 //
 
 import UIKit
+import MapKit
 
-class OfferMap: UIViewController {
+class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    @IBOutlet weak var mapView: MKMapView!
+
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    // var parks: [MKMapItem] = []
+    var offerings: [MKPointAnnotation] = []
+
+    func buildAnnotations() {
+        for offer in Offer.offers {
+            for location in offer.location {
+                let anno = MKPointAnnotation()
+                anno.title = offer.name
+                anno.coordinate = location
+                offerings.append(anno)
+                self.mapView.addAnnotation(anno)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        locationManager.requestWhenInUseAuthorization()
+        mapView.showsUserLocation = true
+
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        mapView.delegate = self
+        buildAnnotations()
     }
     
 
@@ -25,5 +52,40 @@ class OfferMap: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+
+    // MARK: - Mapview
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isEqual(mapView.userLocation) {
+            return nil
+        }
+        var pin = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        let marker = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        marker.markerTintColor = .blue
+        pin = marker
+
+        pin.canShowCallout = true
+        let button = UIButton(type: .detailDisclosure)
+        pin.rightCalloutAccessoryView = button
+        let zoomButton = UIButton(type: .contactAdd)
+        pin.leftCalloutAccessoryView = zoomButton
+        return pin
+    }
+
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+
+        let buttonPressed = control as! UIButton
+        if buttonPressed.buttonType == .contactAdd {
+            print("+ tapped")
+            // mapView.setRegion(initialRegion, animated: true)
+            return
+        } else if buttonPressed.buttonType == .detailDisclosure {
+            print("show details")
+
+        }
+
+    }
+
 
 }
