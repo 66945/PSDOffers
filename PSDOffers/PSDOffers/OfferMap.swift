@@ -40,6 +40,12 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         locationManager.startUpdatingLocation()
         mapView.delegate = self
         buildAnnotations()
+
+        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let center = CLLocationCoordinate2D(latitude: 40.57, longitude: -105.1)
+        let region = MKCoordinateRegion(center: center, span: coordinateSpan)
+        mapView.setRegion(region, animated: true)
+
     }
     
 

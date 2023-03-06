@@ -8,6 +8,9 @@
 import UIKit
 
 class OfferList: UITableViewController {
+
+    var isExpanded: [Bool] = Array(repeating: false, count: Offer.offers.count)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,8 @@ class OfferList: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        // isExpanded[0] = true
     }
 
     // MARK: - Table view data source
@@ -30,13 +35,16 @@ class OfferList: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
+        return isExpanded[indexPath.row] ? UITableView.automaticDimension : 115
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "OfferCell", for: indexPath) as? OfferCell {
-            cell.config(offer: Offer.offers[indexPath.row])
+            cell.config(offer: Offer.offers[indexPath.row],
+                        isExpanded: isExpanded[indexPath.row],
+                        indexPath: indexPath,
+                        delegate: self)
             return cell
         }
 
@@ -87,5 +95,14 @@ class OfferList: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension OfferList: OfferCellProtocol {
+    func expandButtonPressedAt(indexPath: IndexPath) {
+        let row = indexPath.row
+        isExpanded[row] = !isExpanded[row]
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 
 }

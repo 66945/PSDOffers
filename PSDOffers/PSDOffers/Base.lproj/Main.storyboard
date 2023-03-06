@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Map-->
         <scene sceneID="KU8-Iz-ng7">
             <objects>
                 <viewController id="CAm-d2-Nch" customClass="OfferMap" customModule="PSDOffers" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <constraint firstItem="iV1-dk-Dgk" firstAttribute="top" secondItem="4WB-DR-zjI" secondAttribute="top" id="p6t-aY-OFC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="0iM-5R-dyj"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="0iM-5R-dyj"/>
                     <connections>
                         <outlet property="mapView" destination="iV1-dk-Dgk" id="zgW-ZY-seE"/>
                     </connections>
@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="-503" y="91"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="FYD-NI-2KX">
             <objects>
                 <tableViewController id="HWt-ZR-4js" customClass="OfferList" customModule="PSDOffers" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="HWt-ZR-4js" id="fLM-uW-uI0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="SaM-1S-Fmy"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="SaM-1S-Fmy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqz-Sy-PCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,6 +80,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
