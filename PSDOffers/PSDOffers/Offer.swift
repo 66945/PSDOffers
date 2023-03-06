@@ -32,4 +32,19 @@ struct Offer {
         
         return nil
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
