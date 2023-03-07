@@ -21,7 +21,12 @@ class OfferList: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-        // isExpanded[0] = true
+//        if let json = Offer.offers.json {
+//            if let s = String.init(data: json, encoding: .utf8) {
+//                print(s)
+//            }
+//        }
+        Offer.loadOffers()
     }
 
     // MARK: - Table view data source
