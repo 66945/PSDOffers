@@ -1,0 +1,7 @@
+[
+    {"details":["15% off"],"name":"Cups Coffee","logoURL":"sample_logo","location":[{"longitude":-105.11530191349455,"latitude":40.573065239579378}]},
+    {"details":["Free checking"],"name":"Blue Federal Credit Union","logoURL":"sample_logo","location":[{"longitude":-105.07849515554979,"latitude":40.532430708932573}]},
+    {"details":[],"name":"Name 1","logoURL":"sample_logo","location":[]},
+    {"details":[],"name":"Sample","logoURL":"sample_logo","location":[]},{"name":"John","details":[],"location":[]}
+]
+

@@ -22,6 +22,16 @@ class OfferList: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
         // isExpanded[0] = true
+
+//        if let jsonData = Offer.offers.json {
+//            if let s = String.init(data: jsonData, encoding: .utf8) {
+//                print(s)
+//            }
+//        }
+
+        Offer.loadOffers()
+        isExpanded = Array(repeating: false, count: Offer.offers.count)
+
     }
 
     // MARK: - Table view data source
