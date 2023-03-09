@@ -8,6 +8,10 @@
 import UIKit
 import MapKit
 
+class OfferAnnotation: MKPointAnnotation {
+    var offer = Offer(name: "", details: [], logoURL: nil, location: [])
+}
+
 class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
 
@@ -19,9 +23,12 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     func buildAnnotations() {
         for offer in Offer.offers {
             for location in offer.location {
-                let anno = MKPointAnnotation()
+                let anno = OfferAnnotation()
                 anno.title = offer.name
+                let text = offer.details.joined(separator: "\n")
+                anno.subtitle = text
                 anno.coordinate = location
+                anno.offer = offer
                 offerings.append(anno)
                 self.mapView.addAnnotation(anno)
             }
@@ -88,7 +95,13 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             return
         } else if buttonPressed.buttonType == .detailDisclosure {
             print("show details")
-
+            if let anno = view.annotation as? OfferAnnotation {
+                let title = anno.title ?? "Title"
+                let info = anno.offer.details.joined(separator: "\n")
+                let alert = UIAlertController(title: title, message: info, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+            }
         }
 
     }
