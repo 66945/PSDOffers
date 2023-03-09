@@ -48,7 +48,8 @@ class OfferCell: UITableViewCell {
     func config(offer: Offer, isExpanded: Bool, indexPath: IndexPath, delegate: OfferCellProtocol) {
         name.text = offer.name
         logo.image = offer.logoImg
-        offerLabel.text = offer.details.first
+        let text = offer.details.joined(separator: "\n")
+        offerLabel.text = text // offer.details.first
 
         self.isExpanded = isExpanded
         self.indexPath = indexPath
