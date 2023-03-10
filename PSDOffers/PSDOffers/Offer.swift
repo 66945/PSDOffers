@@ -8,14 +8,19 @@
 import Foundation
 import MapKit
 
+struct UrlButton: Codable {
+    var showName: String
+    var url: String
+}
+
 struct Offer {
     static var offers: [Offer] = [
-        Offer(name: "Cups Coffee", details: ["10% off"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.57306523957938, longitude: -105.11530191349455)]),
-        Offer(name: "Blue Federal Credit Union", details: ["Free checking"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.53243070893257, longitude: -105.07849515554979)]),
-        Offer(name: "Name 1", details: [], logoURL: "sample_logo", location: []),
-        Offer(name: "Jakob",  details: [], logoURL: nil,           location: []),
-        Offer(name: "Sample", details: [], logoURL: "sample_logo", location: []),
-        Offer(name: "John",   details: [], logoURL: nil,           location: []),
+        Offer(name: "Cups Coffee", details: ["10% off"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.57306523957938, longitude: -105.11530191349455)], buttons: []),
+        Offer(name: "Blue Federal Credit Union", details: ["Free checking"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.53243070893257, longitude: -105.07849515554979)], buttons: []),
+        Offer(name: "Name 1", details: [], logoURL: "sample_logo", location: [], buttons: []),
+        Offer(name: "Jakob",  details: [], logoURL: nil,           location: [], buttons: []),
+        Offer(name: "Sample", details: [], logoURL: "sample_logo", location: [], buttons: []),
+        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: []),
     ]
     static func loadOffers() {
         print("Loading offers.")
@@ -37,7 +42,8 @@ struct Offer {
     let logoURL: String?
     
     let location: [CLLocationCoordinate2D]
-    
+    let buttons: [UrlButton]
+
     var logoImg: UIImage? {
         if let logoURL = logoURL {
             return UIImage(named: logoURL)
