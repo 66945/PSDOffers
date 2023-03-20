@@ -20,7 +20,7 @@ struct Offer {
         Offer(name: "Name 1", details: [], logoURL: "sample_logo", location: [], buttons: []),
         Offer(name: "Jakob",  details: [], logoURL: nil,           location: [], buttons: []),
         Offer(name: "Sample", details: [], logoURL: "sample_logo", location: [], buttons: []),
-        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: []),
+        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: [UrlButton(showName: "Apple", url: "https://www.apple.com/us-hed/store")]),
     ]
     static func loadOffers() {
         print("Loading offers.")
