@@ -17,6 +17,7 @@ class OfferCell: UITableViewCell {
     
     @IBOutlet weak var expandButton: UIButton!
     @IBOutlet weak var offerLabel: UILabel!
+    @IBOutlet weak var button1: UIButton!
 
     weak var delegate: OfferCellProtocol?
     var isExpanded: Bool = false
@@ -49,10 +50,18 @@ class OfferCell: UITableViewCell {
         name.text = offer.name
         logo.image = offer.logoImg
         offerLabel.text = offer.details.first
+        if offer.buttons.isEmpty {
+            button1.setTitle("N/A", for: .normal)
+            button1.isHidden = true
+        }else{
+            button1.setTitle(offer.buttons[0].showName, for: .normal)
+            button1.isHidden = false
+        }
 
         self.isExpanded = isExpanded
         self.indexPath = indexPath
         self.delegate = delegate
+        
 
         expandButton.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
     }
