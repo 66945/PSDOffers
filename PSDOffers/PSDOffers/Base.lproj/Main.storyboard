@@ -55,10 +55,29 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="SaM-1S-Fmy"/>
+                    <connections>
+                        <segue destination="8wP-YD-oJ4" kind="show" identifier="toWeb" id="l7S-I8-Lqa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqz-Sy-PCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-524" y="-532"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="vI4-cb-IKQ">
+            <objects>
+                <viewController id="8wP-YD-oJ4" customClass="WebViewController" customModule="PSDOffers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4q-1p-D8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wQD-bC-dCt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h6c-vT-uft"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emQ-6R-07z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="-538"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="o6L-Hp-0G9">

@@ -91,19 +91,26 @@ class OfferList: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? WebViewController, let urlString = sender as? String {
+            if let url = URL(string: urlString) {
+                vc.configure(url: url)
+            }
+        }
     }
-    */
 
 }
 
 extension OfferList: OfferCellProtocol {
+    func webButtonPressedAt(indexPath: IndexPath, url: String) {
+        performSegue(withIdentifier: "toWeb", sender: url)
+    }
+
     func expandButtonPressedAt(indexPath: IndexPath) {
         let row = indexPath.row
         isExpanded[row] = !isExpanded[row]

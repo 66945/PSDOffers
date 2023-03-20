@@ -19,6 +19,7 @@
 		6BC2A6DF29B10F58009BD1B1 /* Cross Country.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6BC2A6D429B10F58009BD1B1 /* Cross Country.gpx */; };
 		6BC2A6E029B10F58009BD1B1 /* Super Natural Eats.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6BC2A6D529B10F58009BD1B1 /* Super Natural Eats.gpx */; };
 		9F0F24FF29B6B81300507C5E /* offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F0F24FE29B6B81300507C5E /* offers.json */; };
+		9F3E4A6629C8C013007DD3D2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E4A6529C8C013007DD3D2 /* WebViewController.swift */; };
 		AEF1EAD729AFB6F0009D3C63 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF1EAD629AFB6F0009D3C63 /* Offer.swift */; };
 		AEF1EAD929AFBC47009D3C63 /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF1EAD829AFBC47009D3C63 /* OfferCell.xib */; };
 		AEF1EADB29AFBD01009D3C63 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF1EADA29AFBD01009D3C63 /* OfferCell.swift */; };
@@ -65,6 +66,7 @@
 		6BC2A6D429B10F58009BD1B1 /* Cross Country.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Cross Country.gpx"; sourceTree = "<group>"; };
 		6BC2A6D529B10F58009BD1B1 /* Super Natural Eats.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Super Natural Eats.gpx"; sourceTree = "<group>"; };
 		9F0F24FE29B6B81300507C5E /* offers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = offers.json; sourceTree = "<group>"; };
+		9F3E4A6529C8C013007DD3D2 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AEF1EAD629AFB6F0009D3C63 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		AEF1EAD829AFBC47009D3C63 /* OfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCell.xib; sourceTree = "<group>"; };
 		AEF1EADA29AFBD01009D3C63 /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				AEF8158229AE71FA00E2BC4C /* AppDelegate.swift */,
 				AEF8158429AE71FA00E2BC4C /* SceneDelegate.swift */,
 				AEF8158629AE71FA00E2BC4C /* ViewController.swift */,
+				9F3E4A6529C8C013007DD3D2 /* WebViewController.swift */,
 				AEF1EADC29AFC0ED009D3C63 /* OfferList.swift */,
 				AEF1EADA29AFBD01009D3C63 /* OfferCell.swift */,
 				AEF1EADE29AFC6D1009D3C63 /* OfferMap.swift */,
@@ -337,6 +340,7 @@
 				AEF1EADB29AFBD01009D3C63 /* OfferCell.swift in Sources */,
 				AEF8158329AE71FA00E2BC4C /* AppDelegate.swift in Sources */,
 				AEF8158529AE71FA00E2BC4C /* SceneDelegate.swift in Sources */,
+				9F3E4A6629C8C013007DD3D2 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
