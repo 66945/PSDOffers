@@ -9,6 +9,7 @@ import UIKit
 
 protocol OfferCellProtocol: AnyObject {
     func expandButtonPressedAt(indexPath: IndexPath)
+    func webButtonPressedAt(indexPath: IndexPath, url: String)
 }
 
 class OfferCell: UITableViewCell {
@@ -20,9 +21,13 @@ class OfferCell: UITableViewCell {
     @IBOutlet weak var button1: UIButton!
 
     weak var delegate: OfferCellProtocol?
+    var offer = Offer(name: "", details: [], logoURL: nil, location: [], buttons: [])
     var isExpanded: Bool = false
     var indexPath = IndexPath()
-
+    
+    @objc func webButtonPressed() {
+        self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.buttons[0].url)
+    }
     @objc func expandButtonPressed() {
         let duration: TimeInterval = 0.5
         let nextExpanded = !isExpanded
@@ -38,6 +43,7 @@ class OfferCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         expandButton.addTarget(self, action: #selector(expandButtonPressed), for: .touchUpInside)
+        button1.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,6 +53,7 @@ class OfferCell: UITableViewCell {
     }
 
     func config(offer: Offer, isExpanded: Bool, indexPath: IndexPath, delegate: OfferCellProtocol) {
+        self.offer = offer
         name.text = offer.name
         logo.image = offer.logoImg
         offerLabel.text = offer.details.first

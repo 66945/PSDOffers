@@ -33,6 +33,7 @@
 		AEF8159A29AE71FB00E2BC4C /* PSDOffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF8159929AE71FB00E2BC4C /* PSDOffersTests.swift */; };
 		AEF815A429AE71FC00E2BC4C /* PSDOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */; };
 		AEF815A629AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */; };
+		D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FB6B729C8C0140031F5C3 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		AEF8159F29AE71FB00E2BC4C /* PSDOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITests.swift; sourceTree = "<group>"; };
 		AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D05FB6B729C8C0140031F5C3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				AEF8158229AE71FA00E2BC4C /* AppDelegate.swift */,
 				AEF8158429AE71FA00E2BC4C /* SceneDelegate.swift */,
 				AEF8158629AE71FA00E2BC4C /* ViewController.swift */,
+				D05FB6B729C8C0140031F5C3 /* WebViewController.swift */,
 				AEF1EADC29AFC0ED009D3C63 /* OfferList.swift */,
 				AEF1EADA29AFBD01009D3C63 /* OfferCell.swift */,
 				AEF1EADE29AFC6D1009D3C63 /* OfferMap.swift */,
@@ -337,6 +340,7 @@
 				AEF1EADB29AFBD01009D3C63 /* OfferCell.swift in Sources */,
 				AEF8158329AE71FA00E2BC4C /* AppDelegate.swift in Sources */,
 				AEF8158529AE71FA00E2BC4C /* SceneDelegate.swift in Sources */,
+				D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
