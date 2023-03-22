@@ -23,8 +23,10 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        self.webView.load(URLRequest(url: self.url))
+//        DispatchQueue.global(qos: .background).async {
+//        }
     }
 
     func configure(url: URL) {
