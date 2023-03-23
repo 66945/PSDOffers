@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class OfferList: UITableViewController {
 
@@ -20,12 +21,17 @@ class OfferList: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let imgview = UIImageView(image: UIImage(named: "psdLogo"))
+        imgview.contentMode = .scaleAspectFit
+        navigationItem.titleView = imgview
 
-        if let json = Offer.offers.json {
-            if let s = String.init(data: json, encoding: .utf8) {
-                print(s)
-            }
-        }
+
+//        if let json = Offer.offers.json {
+//            if let s = String.init(data: json, encoding: .utf8) {
+//                print(s)
+//            }
+//        }
+
         Offer.loadOffers()
     }
 
@@ -108,7 +114,11 @@ class OfferList: UITableViewController {
 
 extension OfferList: OfferCellProtocol {
     func webButtonPressedAt(indexPath: IndexPath, url: String) {
-        performSegue(withIdentifier: "toWeb", sender: url)
+        if let realUrl = URL(string: url) {
+            let svc = SFSafariViewController(url: realUrl)
+            present(svc, animated: true)
+        }
+        // performSegue(withIdentifier: "toWeb", sender: url)
     }
 
     func expandButtonPressedAt(indexPath: IndexPath) {
