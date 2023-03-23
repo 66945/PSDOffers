@@ -8,6 +8,11 @@
         "logoURL":"projectPizzaLogo",
         "details":["• Mention you work for PSD for $1.00 off any pizza.\n• Available to cater big events"],
         "location":[],
-        "buttons":[{"url":"https://www.projectpizzaco.org","showName":"Project Pizza"}]}
+        "buttons":[{"url":"https://www.projectpizzaco.org","showName":"Project Pizza"}]},
+    {"name":"Fat Tomato Food Truck",
+        "logoURL":"fatTomatoLogo",
+        "details":["• 10% discounts to all PSD staff and students for food truck events OR we can create a special\n discounted menu with meal packages for the day\n• 10% donation back to the school for any special events or fundraisers\n• Free delivery and setup on any drop catering orders within the district\n• Check out our catering menus:"],
+        "location":[],
+        "buttons":[{"url":"https://fattomatoinc.com/","showName":"Fat Tomato"}, {"url":"https://fattomatoinc.com/catering","showName":"Catering"}, {"url":"https://fattomatoinc.com/private-events","showName":"Private Events"}]}
 ]
 

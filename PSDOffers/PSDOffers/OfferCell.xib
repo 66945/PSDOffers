@@ -46,8 +46,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bve-1z-m4z">
-                                <rect key="frame" x="0.0" y="20.33333333333335" width="353" height="121.66666666666669"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bve-1z-m4z">
+                                <rect key="frame" x="0.0" y="20.333333333333346" width="353" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-PQ-6cz">
+                                <rect key="frame" x="0.0" y="54.666666666666657" width="353" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftN-CZ-oZA">
+                                <rect key="frame" x="0.0" y="89" width="353" height="53"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
@@ -70,6 +80,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="button1" destination="Bve-1z-m4z" id="zkW-8B-QKu"/>
+                <outlet property="button2" destination="jwG-PQ-6cz" id="jeN-ui-mkf"/>
+                <outlet property="button3" destination="ftN-CZ-oZA" id="xCm-Lh-EKL"/>
                 <outlet property="expandButton" destination="UNq-Sg-IwM" id="cAg-vr-fEE"/>
                 <outlet property="logo" destination="9eM-K6-gDB" id="e6E-eP-hse"/>
                 <outlet property="name" destination="sgq-0h-OZw" id="bBw-kV-xFB"/>

@@ -33,6 +33,8 @@ class OfferList: UITableViewController {
 //        }
 
         Offer.loadOffers()
+        isExpanded = Array(repeating: false, count: Offer.offers.count)
+
     }
 
     // MARK: - Table view data source
