@@ -3,6 +3,7 @@
     {"details":["PSD employees are now eligible for membership."],"name":"Blue Federal Credit Union","logoURL":"blueFedLogo","location":[{"longitude":-105.07849515554979,"latitude":40.532430708932573}],"buttons": []},
     {"details":[],"name":"Name 1","logoURL":"sample_logo","location":[],"buttons": []},
     {"details":[],"name":"Sample","logoURL":"sample_logo","location":[],"buttons": []},
-    {"name":"Apple","logoURL":"appleLogo", "details":["Discounted prices for all educators on most Apple products on Apple's online store for educators: https://www.apple.com/us-hed/store"],"location":[],"buttons": [{"url":"https:\/\/www.apple.com\/us-hed\/store","showName":"Apple"}]}
+    {"name":"Apple","logoURL":"appleLogo", "details":["Discounted prices for all educators on most Apple products on Apple's online store for educators: https://www.apple.com/us-hed/store"],"location":[],"buttons": [{"url":"https:\/\/www.apple.com\/us-hed\/store","showName":"Apple"}]},
+    {"name":"Project Pizza", "logoURL":"projectPizzaLogo", "details":["Mention you work for PSD for $1.00 off any pizza.\n Able to cater big events."], "location":[], "buttons": [{"url":"https://www.projectpizzaco.org","showName":"Project Pizza"}]}
 ]
-
+ 
