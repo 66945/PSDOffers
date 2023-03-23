@@ -19,6 +19,9 @@ class OfferCell: UITableViewCell {
     @IBOutlet weak var expandButton: UIButton!
     @IBOutlet weak var offerLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    
 
     weak var delegate: OfferCellProtocol?
     var offer = Offer(name: "", details: [], logoURL: nil, location: [], buttons: [])
@@ -44,6 +47,8 @@ class OfferCell: UITableViewCell {
         // Initialization code
         expandButton.addTarget(self, action: #selector(expandButtonPressed), for: .touchUpInside)
         button1.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+        button3.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -57,14 +62,28 @@ class OfferCell: UITableViewCell {
         name.text = offer.name
         logo.image = offer.logoImg
         offerLabel.text = offer.details.first
-        if offer.buttons.isEmpty {
-            button1.setTitle("N/A", for: .normal)
-            button1.isHidden = true
-        }else{
+        button1.setTitle("N/A", for: .normal)
+        button1.isHidden = true
+        button2.setTitle("N/A", for: .normal)
+        button2.isHidden = true
+        button3.setTitle("N/A", for: .normal)
+        button3.isHidden = true
+        
+        let buttonCount = offer.buttons.count
+        
+        if buttonCount > 0 {
             button1.setTitle(offer.buttons[0].showName, for: .normal)
             button1.isHidden = false
         }
-
+        if buttonCount > 1 {
+            button2.setTitle(offer.buttons[1].showName, for: .normal)
+            button2.isHidden = false
+        }
+        if buttonCount > 2 {
+            button3.setTitle(offer.buttons[2].showName, for: .normal)
+            button3.isHidden = false
+        }
+   // offerLabel.text = offer.details.first
         self.isExpanded = isExpanded
         self.indexPath = indexPath
         self.delegate = delegate
