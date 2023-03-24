@@ -28,8 +28,9 @@ class OfferCell: UITableViewCell {
     var isExpanded: Bool = false
     var indexPath = IndexPath()
     
-    @objc func webButtonPressed() {
-        self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.buttons[0].url)
+    @objc func webButtonPressed(sender: UIButton) {
+        let index = sender.tag
+        self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.buttons[index].url)
     }
     @objc func expandButtonPressed() {
         let duration: TimeInterval = 0.5
@@ -46,9 +47,19 @@ class OfferCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         expandButton.addTarget(self, action: #selector(expandButtonPressed), for: .touchUpInside)
-        button1.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
-        button2.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
-        button3.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+        
+        let buttons = [button1, button2, button3]
+        for (index, button) in buttons.enumerated() {
+            button?.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+            button?.tag = index
+        }
+        
+//        button1.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+//        button2.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+//        button3.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
+//        button1.tag = 0
+//        button2.tag = 1
+//        button3.tag = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
