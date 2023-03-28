@@ -34,7 +34,7 @@ extension Offer {
         Offer(name: "Name 1", details: [], logoURL: "sample_logo", location: [], buttons: [], emailButtons: []),
         Offer(name: "Jakob",  details: [], logoURL: nil,           location: [], buttons: [], emailButtons: []),
         Offer(name: "Sample", details: [], logoURL: "sample_logo", location: [], buttons: [], emailButtons: []),
-        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: [], emailButtons: []),
+        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: [], emailButtons: [EmailButton(address: "joe@x.com")]),
     ]
     static func loadOffers() {
         print("Loading offers.")

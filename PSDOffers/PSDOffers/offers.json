@@ -29,7 +29,7 @@
         "logoURL":"dellLogo",
         "details":["DELL EDUCATION MONTH is 10/1-10/31! Teachers, faculty and students can take advantage of an additional 10% off coupon."],
         "location":[],
-        "buttons": [{"url":"https://www.dell.com/mpp/PoudreSD","showName":"Dell Offers"}],"emailButtons": ["jose_hidalgo@dell.com"]}
+        "buttons": [{"url":"https://www.dell.com/mpp/PoudreSD","showName":"Dell Offers"}],"emailButtons": [{"address": "jose_hidalgo@dell.com"}]}
     
     
     ]

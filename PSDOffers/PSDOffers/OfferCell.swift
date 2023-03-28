@@ -40,7 +40,7 @@ class OfferCell: UITableViewCell {
     
     @objc func emailButtonPressed(sender: UIButton) {
         let index = sender.tag
-        self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.emailButtons[index].address)
+        self.delegate?.emailButtonPressedAt(indexPath: self.indexPath, address: offer.emailButtons[index].address)
         
     }
     @objc func expandButtonPressed() {
@@ -66,7 +66,7 @@ class OfferCell: UITableViewCell {
         }
         
         let eButtons = [emailButton1, emailButton2, emailButton3]
-        for (index, button) in buttons.enumerated() {
+        for (index, button) in eButtons.enumerated() {
             button?.addTarget(self, action: #selector(emailButtonPressed), for: .touchUpInside)
             button?.tag = index
         }
