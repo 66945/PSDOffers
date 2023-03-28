@@ -12,15 +12,29 @@ struct UrlButton: Codable {
     var showName: String
     var url: String
 }
+struct EmailButton: Codable {
+   // var showName: String
+    var address: String
+}
 
 struct Offer {
+    let name:    String
+    let details: [String]
+    let logoURL: String?
+    
+    let location: [CLLocationCoordinate2D]
+    let buttons: [UrlButton]
+    let emailButtons: [EmailButton]
+}
+
+extension Offer {
     static var offers: [Offer] = [
-        Offer(name: "Cups Coffee", details: ["10% off"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.57306523957938, longitude: -105.11530191349455)], buttons: []),
-        Offer(name: "Blue Federal Credit Union", details: ["Free checking"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.53243070893257, longitude: -105.07849515554979)], buttons: []),
-        Offer(name: "Name 1", details: [], logoURL: "sample_logo", location: [], buttons: []),
-        Offer(name: "Jakob",  details: [], logoURL: nil,           location: [], buttons: []),
-        Offer(name: "Sample", details: [], logoURL: "sample_logo", location: [], buttons: []),
-        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: []),
+        Offer(name: "Cups Coffee", details: ["10% off"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.57306523957938, longitude: -105.11530191349455)], buttons: [], emailButtons: []),
+        Offer(name: "Blue Federal Credit Union", details: ["Free checking"], logoURL: "sample_logo", location: [CLLocationCoordinate2D(latitude: 40.53243070893257, longitude: -105.07849515554979)], buttons: [], emailButtons: []),
+        Offer(name: "Name 1", details: [], logoURL: "sample_logo", location: [], buttons: [], emailButtons: []),
+        Offer(name: "Jakob",  details: [], logoURL: nil,           location: [], buttons: [], emailButtons: []),
+        Offer(name: "Sample", details: [], logoURL: "sample_logo", location: [], buttons: [], emailButtons: []),
+        Offer(name: "John",   details: [], logoURL: nil,           location: [], buttons: [], emailButtons: []),
     ]
     static func loadOffers() {
         print("Loading offers.")
@@ -37,12 +51,6 @@ struct Offer {
 
     }
     
-    let name:    String
-    let details: [String]
-    let logoURL: String?
-    
-    let location: [CLLocationCoordinate2D]
-    let buttons: [UrlButton]
 
     var logoImg: UIImage? {
         if let logoURL = logoURL {

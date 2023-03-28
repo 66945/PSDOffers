@@ -10,6 +10,7 @@ import UIKit
 protocol OfferCellProtocol: AnyObject {
     func expandButtonPressedAt(indexPath: IndexPath)
     func webButtonPressedAt(indexPath: IndexPath, url: String)
+    func emailButtonPressedAt(indexPath: IndexPath, address: String)
 }
 
 class OfferCell: UITableViewCell {
@@ -21,16 +22,26 @@ class OfferCell: UITableViewCell {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var emailButton1: UIButton!
+    @IBOutlet weak var emailButton2: UIButton!
+    @IBOutlet weak var emailButton3: UIButton!
+
     
 
     weak var delegate: OfferCellProtocol?
-    var offer = Offer(name: "", details: [], logoURL: nil, location: [], buttons: [])
+    var offer = Offer(name: "", details: [], logoURL: nil, location: [], buttons: [], emailButtons: [])
     var isExpanded: Bool = false
     var indexPath = IndexPath()
     
     @objc func webButtonPressed(sender: UIButton) {
         let index = sender.tag
         self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.buttons[index].url)
+    }
+    
+    @objc func emailButtonPressed(sender: UIButton) {
+        let index = sender.tag
+        self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.emailButtons[index].address)
+        
     }
     @objc func expandButtonPressed() {
         let duration: TimeInterval = 0.5
@@ -54,12 +65,11 @@ class OfferCell: UITableViewCell {
             button?.tag = index
         }
         
-//        button1.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
-//        button2.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
-//        button3.addTarget(self, action: #selector(webButtonPressed), for: .touchUpInside)
-//        button1.tag = 0
-//        button2.tag = 1
-//        button3.tag = 2
+        let eButtons = [emailButton1, emailButton2, emailButton3]
+        for (index, button) in buttons.enumerated() {
+            button?.addTarget(self, action: #selector(emailButtonPressed), for: .touchUpInside)
+            button?.tag = index
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -93,6 +103,29 @@ class OfferCell: UITableViewCell {
         if buttonCount > 2 {
             button3.setTitle(offer.buttons[2].showName, for: .normal)
             button3.isHidden = false
+        }
+        
+        emailButton1.setTitle("N/A", for: .normal)
+        emailButton1.isHidden = true
+        emailButton2.setTitle("N/A", for: .normal)
+        emailButton2.isHidden = true
+        emailButton3.setTitle("N/A", for: .normal)
+        emailButton3.isHidden = true
+        
+        
+        let eButtonCount = offer.emailButtons.count
+        
+        if eButtonCount > 0 {
+            emailButton1.setTitle(offer.emailButtons[0].address, for: .normal)
+            emailButton1.isHidden = false
+        }
+        if eButtonCount > 1 {
+            emailButton2.setTitle(offer.emailButtons[1].address, for: .normal)
+            emailButton2.isHidden = false
+        }
+        if eButtonCount > 2 {
+            emailButton3.setTitle(offer.emailButtons[2].address, for: .normal)
+            emailButton3.isHidden = false
         }
    // offerLabel.text = offer.details.first
         self.isExpanded = isExpanded

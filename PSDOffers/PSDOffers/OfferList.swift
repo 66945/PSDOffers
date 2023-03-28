@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import MessageUI
 
 class OfferList: UITableViewController {
 
@@ -71,7 +72,37 @@ class OfferList: UITableViewController {
     }
 }
 
+extension OfferList: MFMailComposeViewControllerDelegate {
+    func sendEmail(address: String) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([address])
+            mail.setMessageBody("<p></p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+            let alert = UIAlertController(title: "Unable to send mail", message: "Check internet connection.", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
+
 extension OfferList: OfferCellProtocol {
+    func emailButtonPressedAt(indexPath: IndexPath, address: String) {
+        sendEmail(address: address)
+    }
+    
     func webButtonPressedAt(indexPath: IndexPath, url: String) {
         if let realUrl = URL(string: url) {
             let svc = SFSafariViewController(url: realUrl)
