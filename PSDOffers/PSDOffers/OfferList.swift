@@ -48,7 +48,7 @@ class OfferList: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return isExpanded[indexPath.row] ? UITableView.automaticDimension : 115
+        return isExpanded[indexPath.row] ? UITableView.automaticDimension : 124
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
