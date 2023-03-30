@@ -25,9 +25,39 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 offerings.append(anno)
                 self.mapView.addAnnotation(anno)
             }
+            for address in offer.addresses {
+                getCoordinate(addressString: address, completionHandler: { (coordinate, error) in
+                    if error == nil {
+                        let anno = MKPointAnnotation()
+                        anno.title = offer.name
+                        anno.coordinate = coordinate
+                        self.offerings.append(anno)
+                        self.mapView.addAnnotation(anno)
+                    } else {
+                    // print error
+                    }
+                })
+            }
         }
     }
 
+    func getCoordinate( addressString : String,
+                        completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                    
+                    completionHandler(location.coordinate, nil)
+                    return
+                }
+            }
+            
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

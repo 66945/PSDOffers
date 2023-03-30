@@ -29,7 +29,7 @@ class OfferCell: UITableViewCell {
     
 
     weak var delegate: OfferCellProtocol?
-    var offer = Offer(name: "", details: [], logoURL: nil, location: [], buttons: [], emailButtons: [])
+    var offer = Offer(name: "", details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: [])
     var isExpanded: Bool = false
     var indexPath = IndexPath()
     
