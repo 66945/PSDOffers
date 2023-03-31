@@ -33,12 +33,12 @@ extension Offer {
     
     
     static var offers: [Offer] = [
-        Offer(name: "Cups Coffee", details: ["10% off"], logoURL: "sample_logo", addresses: [], location: [CLLocationCoordinate2D(latitude: 40.57306523957938, longitude: -105.11530191349455)], buttons: [], emailButtons: []),
-        Offer(name: "Blue Federal Credit Union", details: ["Free checking"], logoURL: "sample_logo", addresses: [], location: [CLLocationCoordinate2D(latitude: 40.53243070893257, longitude: -105.07849515554979)], buttons: [], emailButtons: []),
-        Offer(name: "Name 1", details: [], logoURL: "sample_logo", addresses: [], location: [], buttons: [], emailButtons: []),
-        Offer(name: "Jakob",  details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: []),
-        Offer(name: "Sample", details: [], logoURL: "sample_logo", addresses: [], location: [], buttons: [], emailButtons: []),
-        Offer(name: "John",   details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: [EmailButton(address: "joe@x.com")]),
+//        Offer(name: "Cups Coffee", details: ["10% off"], logoURL: "sample_logo", addresses: [], location: [CLLocationCoordinate2D(latitude: 40.57306523957938, longitude: -105.11530191349455)], buttons: [], emailButtons: []),
+//        Offer(name: "Blue Federal Credit Union", details: ["Free checking"], logoURL: "sample_logo", addresses: [], location: [CLLocationCoordinate2D(latitude: 40.53243070893257, longitude: -105.07849515554979)], buttons: [], emailButtons: []),
+//        Offer(name: "Name 1", details: [], logoURL: "sample_logo", addresses: [], location: [], buttons: [], emailButtons: []),
+//        Offer(name: "Jakob",  details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: []),
+//        Offer(name: "Sample", details: [], logoURL: "sample_logo", addresses: [], location: [], buttons: [], emailButtons: []),
+//        Offer(name: "John",   details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: [EmailButton(address: "joe@x.com")]),
     ]
     static func loadOffers() {
         print("Loading offers.")
