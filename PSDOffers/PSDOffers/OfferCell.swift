@@ -25,23 +25,29 @@ class OfferCell: UITableViewCell {
     @IBOutlet weak var emailButton1: UIButton!
     @IBOutlet weak var emailButton2: UIButton!
     @IBOutlet weak var emailButton3: UIButton!
-
     
-
+    
+    
     weak var delegate: OfferCellProtocol?
-    var offer = Offer(name: "", details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: [])
+    
+    var offer: Offer = .empty
+    
+    //    var offer = Offer(name: "", details: [], logoURL: nil, addresses: [], location: [], buttons: [], emailButtons: [])
     var isExpanded: Bool = false
     var indexPath = IndexPath()
     
     @objc func webButtonPressed(sender: UIButton) {
         let index = sender.tag
-        self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: offer.buttons[index].url)
+        if let buttons = offer.buttons {
+            self.delegate?.webButtonPressedAt(indexPath: self.indexPath, url: buttons[index].url)
+        }
     }
     
     @objc func emailButtonPressed(sender: UIButton) {
-        let index = sender.tag
-        self.delegate?.emailButtonPressedAt(indexPath: self.indexPath, address: offer.emailButtons[index].address)
-        
+        if let emailButtons = offer.emailButtons {
+            let index = sender.tag
+            self.delegate?.emailButtonPressedAt(indexPath: self.indexPath, address: emailButtons[index].address)
+        }
     }
     @objc func expandButtonPressed() {
         let duration: TimeInterval = 0.5
@@ -53,7 +59,7 @@ class OfferCell: UITableViewCell {
             self.delegate?.expandButtonPressedAt(indexPath: self.indexPath)
         })
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -71,18 +77,18 @@ class OfferCell: UITableViewCell {
             button?.tag = index
         }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
     func config(offer: Offer, isExpanded: Bool, indexPath: IndexPath, delegate: OfferCellProtocol) {
         self.offer = offer
         name.text = offer.name
         logo.image = offer.logoImg
-        offerLabel.text = offer.details.first
+        offerLabel.text = offer.details?.first
         button1.setTitle("N/A", for: .normal)
         button1.isHidden = true
         button2.setTitle("N/A", for: .normal)
@@ -90,49 +96,52 @@ class OfferCell: UITableViewCell {
         button3.setTitle("N/A", for: .normal)
         button3.isHidden = true
         
-        let buttonCount = offer.buttons.count
-        
-        if buttonCount > 0 {
-            button1.setTitle(offer.buttons[0].showName, for: .normal)
-            button1.isHidden = false
+        if let buttons = offer.buttons {
+            let buttonCount = buttons.count
+            
+            if buttonCount > 0 {
+                button1.setTitle(buttons[0].showName, for: .normal)
+                button1.isHidden = false
+            }
+            if buttonCount > 1 {
+                button2.setTitle(buttons[1].showName, for: .normal)
+                button2.isHidden = false
+            }
+            if buttonCount > 2 {
+                button3.setTitle(buttons[2].showName, for: .normal)
+                button3.isHidden = false
+            }
+            
+            emailButton1.setTitle("N/A", for: .normal)
+            emailButton1.isHidden = true
+            emailButton2.setTitle("N/A", for: .normal)
+            emailButton2.isHidden = true
+            emailButton3.setTitle("N/A", for: .normal)
+            emailButton3.isHidden = true
+            
+            if let emailButtons = offer.emailButtons {
+                let eButtonCount = emailButtons.count
+                
+                if eButtonCount > 0 {
+                    emailButton1.setTitle(emailButtons[0].address, for: .normal)
+                    emailButton1.isHidden = false
+                }
+                if eButtonCount > 1 {
+                    emailButton2.setTitle(emailButtons[1].address, for: .normal)
+                    emailButton2.isHidden = false
+                }
+                if eButtonCount > 2 {
+                    emailButton3.setTitle(emailButtons[2].address, for: .normal)
+                    emailButton3.isHidden = false
+                }
+                // offerLabel.text = offer.details.first
+                self.isExpanded = isExpanded
+                self.indexPath = indexPath
+                self.delegate = delegate
+                
+                
+                expandButton.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
+            }
         }
-        if buttonCount > 1 {
-            button2.setTitle(offer.buttons[1].showName, for: .normal)
-            button2.isHidden = false
-        }
-        if buttonCount > 2 {
-            button3.setTitle(offer.buttons[2].showName, for: .normal)
-            button3.isHidden = false
-        }
-        
-        emailButton1.setTitle("N/A", for: .normal)
-        emailButton1.isHidden = true
-        emailButton2.setTitle("N/A", for: .normal)
-        emailButton2.isHidden = true
-        emailButton3.setTitle("N/A", for: .normal)
-        emailButton3.isHidden = true
-        
-        
-        let eButtonCount = offer.emailButtons.count
-        
-        if eButtonCount > 0 {
-            emailButton1.setTitle(offer.emailButtons[0].address, for: .normal)
-            emailButton1.isHidden = false
-        }
-        if eButtonCount > 1 {
-            emailButton2.setTitle(offer.emailButtons[1].address, for: .normal)
-            emailButton2.isHidden = false
-        }
-        if eButtonCount > 2 {
-            emailButton3.setTitle(offer.emailButtons[2].address, for: .normal)
-            emailButton3.isHidden = false
-        }
-   // offerLabel.text = offer.details.first
-        self.isExpanded = isExpanded
-        self.indexPath = indexPath
-        self.delegate = delegate
-        
-
-        expandButton.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
     }
 }

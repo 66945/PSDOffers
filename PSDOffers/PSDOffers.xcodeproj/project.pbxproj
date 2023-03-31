@@ -520,6 +520,7 @@
 				DEVELOPMENT_TEAM = NP7VLSL82Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PSDOffers/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show where you are.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -550,6 +551,7 @@
 				DEVELOPMENT_TEAM = NP7VLSL82Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PSDOffers/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show where you are.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -18,25 +18,29 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     func buildAnnotations() {
         for offer in Offer.offers {
-            for location in offer.location {
-                let anno = MKPointAnnotation()
-                anno.title = offer.name
-                anno.coordinate = location
-                offerings.append(anno)
-                self.mapView.addAnnotation(anno)
+            if let locations = offer.location {
+                for location in locations {
+                    let anno = MKPointAnnotation()
+                    anno.title = offer.name
+                    anno.coordinate = location
+                    offerings.append(anno)
+                    self.mapView.addAnnotation(anno)
+                }
             }
-            for address in offer.addresses {
-                getCoordinate(addressString: address, completionHandler: { (coordinate, error) in
-                    if error == nil {
-                        let anno = MKPointAnnotation()
-                        anno.title = offer.name
-                        anno.coordinate = coordinate
-                        self.offerings.append(anno)
-                        self.mapView.addAnnotation(anno)
-                    } else {
-                    // print error
-                    }
-                })
+            if let addresses = offer.addresses {
+                for address in addresses {
+                    getCoordinate(addressString: address, completionHandler: { (coordinate, error) in
+                        if error == nil {
+                            let anno = MKPointAnnotation()
+                            anno.title = offer.name
+                            anno.coordinate = coordinate
+                            self.offerings.append(anno)
+                            self.mapView.addAnnotation(anno)
+                        } else {
+                            // print error
+                        }
+                    })
+                }
             }
         }
     }
