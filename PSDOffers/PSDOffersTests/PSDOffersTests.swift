@@ -17,6 +17,32 @@ final class PSDOffersTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testWriteJson() throws {
+        let offers = [Offer(name: "Test", addresses: Optional(["1033 S Taft Hill Rd, Fort Collins, CO"]))]
+        if let json = offers.json {
+            if let s = String(data: json, encoding: .utf8) {
+                print()
+                print(s)
+                print()
+            }
+        }
+        
+    }
+    
+    func testReadJson() throws {
+        if let url = Bundle.main.url(forResource: "testOffers", withExtension: "json") {
+            do {
+                let jsonData = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let nextOffers = try decoder.decode([Offer].self, from: jsonData)
+                print(nextOffers)
+            } catch {
+                print("error:\(error)")
+            }
+        }
+    }
+
 
     func testExample() throws {
         // This is an example of a functional test case.

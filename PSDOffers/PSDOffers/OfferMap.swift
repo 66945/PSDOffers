@@ -18,15 +18,7 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     func buildAnnotations() {
         for offer in Offer.offers {
-            if let locations = offer.location {
-                for location in locations {
-                    let anno = MKPointAnnotation()
-                    anno.title = offer.name
-                    anno.coordinate = location
-                    offerings.append(anno)
-                    self.mapView.addAnnotation(anno)
-                }
-            }
+            
             if let addresses = offer.addresses {
                 for address in addresses {
                     getCoordinate(addressString: address, completionHandler: { (coordinate, error) in
