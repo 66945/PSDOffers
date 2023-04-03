@@ -111,37 +111,38 @@ class OfferCell: UITableViewCell {
                 button3.setTitle(buttons[2].showName, for: .normal)
                 button3.isHidden = false
             }
+        }
+        emailButton1.setTitle("N/A", for: .normal)
+        emailButton1.isHidden = true
+        emailButton2.setTitle("N/A", for: .normal)
+        emailButton2.isHidden = true
+        emailButton3.setTitle("N/A", for: .normal)
+        emailButton3.isHidden = true
+        
+        if let emailButtons = offer.emailButtons {
+            let eButtonCount = emailButtons.count
             
-            emailButton1.setTitle("N/A", for: .normal)
-            emailButton1.isHidden = true
-            emailButton2.setTitle("N/A", for: .normal)
-            emailButton2.isHidden = true
-            emailButton3.setTitle("N/A", for: .normal)
-            emailButton3.isHidden = true
-            
-            if let emailButtons = offer.emailButtons {
-                let eButtonCount = emailButtons.count
-                
-                if eButtonCount > 0 {
-                    emailButton1.setTitle(emailButtons[0].address, for: .normal)
-                    emailButton1.isHidden = false
-                }
-                if eButtonCount > 1 {
-                    emailButton2.setTitle(emailButtons[1].address, for: .normal)
-                    emailButton2.isHidden = false
-                }
-                if eButtonCount > 2 {
-                    emailButton3.setTitle(emailButtons[2].address, for: .normal)
-                    emailButton3.isHidden = false
-                }
-                // offerLabel.text = offer.details.first
-                self.isExpanded = isExpanded
-                self.indexPath = indexPath
-                self.delegate = delegate
-                
-                
-                expandButton.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
+            if eButtonCount > 0 {
+                emailButton1.setTitle(emailButtons[0].address, for: .normal)
+                emailButton1.isHidden = false
+            }
+            if eButtonCount > 1 {
+                emailButton2.setTitle(emailButtons[1].address, for: .normal)
+                emailButton2.isHidden = false
+            }
+            if eButtonCount > 2 {
+                emailButton3.setTitle(emailButtons[2].address, for: .normal)
+                emailButton3.isHidden = false
             }
         }
+        // offerLabel.text = offer.details.first
+        self.isExpanded = isExpanded
+        self.indexPath = indexPath
+        self.delegate = delegate
+        
+        
+        expandButton.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
     }
 }
+
+

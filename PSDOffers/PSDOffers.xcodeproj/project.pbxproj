@@ -34,6 +34,7 @@
 		AEF815A429AE71FC00E2BC4C /* PSDOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */; };
 		AEF815A629AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */; };
 		D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FB6B729C8C0140031F5C3 /* WebViewController.swift */; };
+		D0FAB47329DB2F0F0013E327 /* testOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FAB47229DB2F0F0013E327 /* testOffers.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITests.swift; sourceTree = "<group>"; };
 		AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D05FB6B729C8C0140031F5C3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D0FAB47229DB2F0F0013E327 /* testOffers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testOffers.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				AEF8159029AE71FB00E2BC4C /* Info.plist */,
 				AEF1EAD629AFB6F0009D3C63 /* Offer.swift */,
 				9F0F24FE29B6B81300507C5E /* offers.json */,
+				D0FAB47229DB2F0F0013E327 /* testOffers.json */,
 			);
 			path = PSDOffers;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				6BC2A6DC29B10F58009BD1B1 /* blue credit 1.gpx in Resources */,
 				6BC2A6D629B10F58009BD1B1 /* Re:Max Location.gpx in Resources */,
 				6BC2A6D729B10F58009BD1B1 /* blue credit 3.gpx in Resources */,
+				D0FAB47329DB2F0F0013E327 /* testOffers.json in Resources */,
 				AEF8158A29AE71FA00E2BC4C /* Main.storyboard in Resources */,
 				6BC2A6DD29B10F58009BD1B1 /* Tmobile 3.gpx in Resources */,
 				6BC2A6D929B10F58009BD1B1 /* Cups Coffee.gpx in Resources */,
