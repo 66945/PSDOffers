@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23L-A8-jRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="-532"/>
+            <point key="canvasLocation" x="2185" y="-766"/>
         </scene>
         <!--Offer List Table-->
         <scene sceneID="V61-YP-1cp">
@@ -104,6 +104,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0bY-Yz-K8L"/>
+                    <connections>
+                        <segue destination="Mmh-b1-Fw8" kind="show" identifier="toWeb2" id="kic-t2-JL2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o49-Q2-v96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +169,9 @@
             <point key="canvasLocation" x="346" y="115"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kic-t2-JL2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="map" catalog="system" width="128" height="112"/>
