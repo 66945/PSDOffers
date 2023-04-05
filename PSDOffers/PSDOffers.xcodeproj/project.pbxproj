@@ -34,6 +34,7 @@
 		AEF815A429AE71FC00E2BC4C /* PSDOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */; };
 		AEF815A629AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */; };
 		D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FB6B729C8C0140031F5C3 /* WebViewController.swift */; };
+		D0A4EA0229DC897300386430 /* OfferListTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4EA0129DC897300386430 /* OfferListTable.swift */; };
 		D0FAB47329DB2F0F0013E327 /* testOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FAB47229DB2F0F0013E327 /* testOffers.json */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITests.swift; sourceTree = "<group>"; };
 		AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D05FB6B729C8C0140031F5C3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D0A4EA0129DC897300386430 /* OfferListTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListTable.swift; sourceTree = "<group>"; };
 		D0FAB47229DB2F0F0013E327 /* testOffers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testOffers.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				AEF8158629AE71FA00E2BC4C /* ViewController.swift */,
 				D05FB6B729C8C0140031F5C3 /* WebViewController.swift */,
 				AEF1EADC29AFC0ED009D3C63 /* OfferList.swift */,
+				D0A4EA0129DC897300386430 /* OfferListTable.swift */,
 				AEF1EADA29AFBD01009D3C63 /* OfferCell.swift */,
 				AEF1EADE29AFC6D1009D3C63 /* OfferMap.swift */,
 				AEF8158B29AE71FB00E2BC4C /* Assets.xcassets */,
@@ -341,6 +344,7 @@
 				AEF1EAD729AFB6F0009D3C63 /* Offer.swift in Sources */,
 				AEF1EADF29AFC6D1009D3C63 /* OfferMap.swift in Sources */,
 				AEF8158729AE71FA00E2BC4C /* ViewController.swift in Sources */,
+				D0A4EA0229DC897300386430 /* OfferListTable.swift in Sources */,
 				AEF1EADB29AFBD01009D3C63 /* OfferCell.swift in Sources */,
 				AEF8158329AE71FA00E2BC4C /* AppDelegate.swift in Sources */,
 				AEF8158529AE71FA00E2BC4C /* SceneDelegate.swift in Sources */,

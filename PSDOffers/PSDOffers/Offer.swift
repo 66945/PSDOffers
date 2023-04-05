@@ -22,6 +22,7 @@ struct Offer {
     var details: [String]?
     var logoURL: String?        // = nil
     var addresses: [String]? // = nil
+    var addressIndex: Int?
     
     var buttons: [UrlButton]?
     var emailButtons: [EmailButton]?
