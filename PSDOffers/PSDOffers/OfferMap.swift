@@ -132,6 +132,22 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             if buttonPressed.buttonType == .contactAdd {
                 print("+ tapped")
                 // mapView.setRegion(initialRegion, animated: true)
+                let oldSpan = mapView.region.span
+                let minSpan = min(oldSpan.latitudeDelta, oldSpan.longitudeDelta)
+                if minSpan > 0.06 {
+                    
+                    let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+                    if let center = view.annotation?.coordinate {
+                        let region = MKCoordinateRegion(center: center, span: coordinateSpan)
+                        mapView.setRegion(region, animated: true)
+                    }
+                } else {
+                    let coordinateSpan = MKCoordinateSpan(latitudeDelta: oldSpan.latitudeDelta * 0.5, longitudeDelta: oldSpan.longitudeDelta * 0.5)
+                    if let center = view.annotation?.coordinate {
+                        let region = MKCoordinateRegion(center: center, span: coordinateSpan)
+                        mapView.setRegion(region, animated: true)
+                    }
+                }
                 return
             } else if buttonPressed.buttonType == .detailDisclosure {
                 print("show details")
