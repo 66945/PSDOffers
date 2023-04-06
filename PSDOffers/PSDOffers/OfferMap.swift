@@ -120,8 +120,12 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 pin.canShowCallout = true
                 let button = UIButton(type: .detailDisclosure)
                 pin.rightCalloutAccessoryView = button
-                let zoomButton = UIButton(type: .contactAdd)
+                let image = UIImage(systemName: "magnifyingglass")
+                let zoomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
                 pin.leftCalloutAccessoryView = zoomButton
+                zoomButton.setImage(image, for: .normal)
+                zoomButton.configuration = UIButton.Configuration.plain()
+                zoomButton.tag = 1
             }
             return pin
         }
@@ -129,7 +133,7 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             
             let buttonPressed = control as! UIButton
-            if buttonPressed.buttonType == .contactAdd {
+            if buttonPressed.tag == 1 {
                 print("+ tapped")
                 // mapView.setRegion(initialRegion, animated: true)
                 let oldSpan = mapView.region.span

@@ -48,7 +48,8 @@ extension Offer {
                 let jsonData = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let nextOffers = try decoder.decode([Offer].self, from: jsonData)
-                Offer.offers = nextOffers
+                let sortedOffers = nextOffers.sorted(by: { $0.name < $1.name })
+                Offer.offers = sortedOffers
             } catch {
                 print("error:\(error)")
             }

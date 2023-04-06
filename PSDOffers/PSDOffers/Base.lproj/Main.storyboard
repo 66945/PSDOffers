@@ -32,7 +32,9 @@
                             <constraint firstItem="iV1-dk-Dgk" firstAttribute="top" secondItem="4WB-DR-zjI" secondAttribute="top" id="p6t-aY-OFC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nuz-0I-wWT"/>
+                    <navigationItem key="navigationItem" id="Nuz-0I-wWT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet" catalog="system" id="Tac-Ay-5ta"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="iV1-dk-Dgk" id="zgW-ZY-seE"/>
                         <segue destination="rNz-bU-mmD" kind="show" identifier="showOffer" id="M17-oQ-od0"/>
@@ -173,6 +175,7 @@
         <segue reference="kic-t2-JL2"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
