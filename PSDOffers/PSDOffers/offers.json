@@ -30,7 +30,12 @@
         "logoURL":"reMaxLogo",
         "details":["    •    I would love to be your partner in buying or selling your next home and am proud to offer to all Poudre School District (PSD) employees: \n \n ◦    Complimentary Comparative Market Analysis (CMA) \n \n ◦    PSD Employees receive cash back at close of $1,000 for each transaction! \n \n ◦    In addition, for each Real Estate Transaction closed with me, I will personally donate $250 to a PSD school of your choice! \n \n ◦    And, for ANY non-employee transaction closed through a referral from a PSD employee, I’ll STILL donate $250 to a PSD school of choice of the individual closing the transaction! \n \n •    Contact Mike White at: Mike@MyOwnColoradoHome.com \n \n •    970-294-6011 \n \n •    You can also call our office (970-221-5995), visit at 1018 Centre Avenue, or reach out through our office website at ftcollinshomes.com \n \n •    Download and share the PSD promo flyer here."],
         "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Updated%20PSD%20Employee%20Flyer%20Spring%202023%20Loan%20Reg.pdf","showName":"PSD Promo Flyer"},
-        {"url":"https://www.ftcollinshomes.com","showName":"ftcollinshomes.com"}],"addresses": ["1018 Centre Avenue, Fort Collins, CO"]}
+        {"url":"https://www.ftcollinshomes.com","showName":"ftcollinshomes.com"}],"addresses": ["1018 Centre Avenue, Fort Collins, CO"]},
+    
+    {"name":"Cross Country Mortgage",
+        "logoURL":"crossCountryLogo",
+        "details":["•    Poudre School District Employees receive a lender credit of up to $2,198* to offset closing costs when they work with CrossCountry Mortgage on a home purchase or refinance. \n \n•    To get started, visit the website below, or call: \n \n ◦    Ryan Lendrum at 720.990.3687 \n \n ◦    Jacob Stewart at 970.218.1147 \n \n •    Remember: mention this offer when you call or simply apply online at the web address below."], "buttons": [{"url":"https://ccmaffinity.com/Poudre-Schools","showName":"Cross Country Mortgage"}, {"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/CO_Gray-Lendrum_Poudre_Affinity%20Intro%20Flyer_Stewart_AA.pdf","showName":"PSD Flyer"}],
+        "addresses": ["2108 Milestone Dr Suite 200, Fort Collins, CO"]}
     
 ]
  
