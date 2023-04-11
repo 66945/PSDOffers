@@ -28,11 +28,11 @@
 		AEF8158529AE71FA00E2BC4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF8158429AE71FA00E2BC4C /* SceneDelegate.swift */; };
 		AEF8158729AE71FA00E2BC4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF8158629AE71FA00E2BC4C /* ViewController.swift */; };
 		AEF8158A29AE71FA00E2BC4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF8158829AE71FA00E2BC4C /* Main.storyboard */; };
-		AEF8158C29AE71FB00E2BC4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8158B29AE71FB00E2BC4C /* Assets.xcassets */; };
 		AEF8158F29AE71FB00E2BC4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF8158D29AE71FB00E2BC4C /* LaunchScreen.storyboard */; };
 		AEF8159A29AE71FB00E2BC4C /* PSDOffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF8159929AE71FB00E2BC4C /* PSDOffersTests.swift */; };
 		AEF815A429AE71FC00E2BC4C /* PSDOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */; };
 		AEF815A629AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */; };
+		D03B62F129E466370097F71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8158B29AE71FB00E2BC4C /* Assets.xcassets */; };
 		D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FB6B729C8C0140031F5C3 /* WebViewController.swift */; };
 		D0A4EA0229DC897300386430 /* OfferListTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4EA0129DC897300386430 /* OfferListTable.swift */; };
 		D0FAB47329DB2F0F0013E327 /* testOffers.json in Resources */ = {isa = PBXBuildFile; fileRef = D0FAB47229DB2F0F0013E327 /* testOffers.json */; };
@@ -78,7 +78,7 @@
 		AEF8158429AE71FA00E2BC4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AEF8158629AE71FA00E2BC4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEF8158929AE71FA00E2BC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AEF8158B29AE71FB00E2BC4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEF8158B29AE71FB00E2BC4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PSDOffers/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		AEF8158E29AE71FB00E2BC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEF8159029AE71FB00E2BC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF8159529AE71FB00E2BC4C /* PSDOffersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDOffersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,8 +305,8 @@
 				6BC2A6D829B10F58009BD1B1 /* blue credit 2.gpx in Resources */,
 				AEF1EAD929AFBC47009D3C63 /* OfferCell.xib in Resources */,
 				6BC2A6DF29B10F58009BD1B1 /* Cross Country.gpx in Resources */,
+				D03B62F129E466370097F71D /* Assets.xcassets in Resources */,
 				AEF8158F29AE71FB00E2BC4C /* LaunchScreen.storyboard in Resources */,
-				AEF8158C29AE71FB00E2BC4C /* Assets.xcassets in Resources */,
 				9F0F24FF29B6B81300507C5E /* offers.json in Resources */,
 				6BC2A6DC29B10F58009BD1B1 /* blue credit 1.gpx in Resources */,
 				6BC2A6D629B10F58009BD1B1 /* Re:Max Location.gpx in Resources */,
@@ -587,7 +587,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X3J9HZLD55;
+				DEVELOPMENT_TEAM = NP7VLSL82Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -607,7 +607,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X3J9HZLD55;
+				DEVELOPMENT_TEAM = NP7VLSL82Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;

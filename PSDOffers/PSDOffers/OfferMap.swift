@@ -116,7 +116,7 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 marker.offer = offerPoint.offer
                 marker.markerTintColor = .blue
                 pin = marker
-                
+            
                 pin.canShowCallout = true
                 let button = UIButton(type: .detailDisclosure)
                 pin.rightCalloutAccessoryView = button

@@ -1,5 +1,8 @@
 [
-    {"details":["Proudly partners with PSD's ACE program and Work-Based Learning for students."],"name":"Cups Coffee","logoURL":"cupsCoffeeLogo","addresses": ["1033 S Taft Hill Rd, Fort Collins, CO"]},
+    {"details":["•    Proudly partners with PSD's ACE program and Work-Based Learning for students. \n \n•    Available to cater big events. Message the email below 72 hours before your event for an estimate. \n \n•    Ask about hosting our coffee cart at your school or picking up coffee travelers ($2-$8/person) and receive free 16oz drink vouchers for your staff. \n \n•    Nominate a PSD employee for a free coffee using the link below."],"name":"Cups Coffee","logoURL":"cupsCoffeeLogo","buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/CUPS%20Catering%20Options%20Winter%202023%20(1).pdf","showName":"Menu"},
+        {"url":"https://cupstafthill.com/fort-collins-cups-community-coffee-cuplift","showName":"Cuplift Nomination"},
+    {"url":"https://cupstafthill.com/","showName":"Main Website"}],
+        "emailButtons": [{"address": "cupstafthill@gmail.com"}], "addresses": ["1033 S Taft Hill Rd, Fort Collins, CO"]},
     
     {"details":["PSD employees are now eligible for membership."],"name":"Blue Federal Credit Union","logoURL":"blueFedLogo","addresses": ["181 W Boardwalk Dr, Fort Collins, CO","2261 E Drake Rd Suite 110, Fort Collins, CO","136 W Mountain Ave, Fort Collins, CO"]},
     
@@ -35,8 +38,12 @@
     {"name":"Cross Country Mortgage",
         "logoURL":"crossCountryLogo",
         "details":["•    Poudre School District Employees receive a lender credit of up to $2,198* to offset closing costs when they work with CrossCountry Mortgage on a home purchase or refinance. \n \n•    To get started, visit the website below, or call: \n \n ◦    Ryan Lendrum at 720.990.3687 \n \n ◦    Jacob Stewart at 970.218.1147 \n \n •    Remember: mention this offer when you call or simply apply online at the web address below."], "buttons": [{"url":"https://ccmaffinity.com/Poudre-Schools","showName":"Cross Country Mortgage"}, {"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/CO_Gray-Lendrum_Poudre_Affinity%20Intro%20Flyer_Stewart_AA.pdf","showName":"PSD Flyer"}],
-        "addresses": ["2108 Milestone Dr Suite 200, Fort Collins, CO"]}
-    
+        "addresses": ["2108 Milestone Dr Suite 200, Fort Collins, CO"]},
+
+    {"name":"American College of Education",
+        "logoURL":"americanCollegeLogo",
+        "details":["•    ACE is extremely excited to announce the launch of our B.A. in Education Studies that will start cohorts this January 2023. \n \n •    Poudre School District employees receive a discount towards programs at American College of Education \n \n•    Send a message to the email below for more information"],
+        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/KS%20March%202023%20Webinar%20w_QR.pdf","showName":"Webinar Flyer"}],"emailButtons": [{"address": "kerry.delaney@ace.edu"}]},
 ]
  
  

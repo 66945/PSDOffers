@@ -35,7 +35,7 @@
                             <constraint firstAttribute="height" constant="44" id="Wx9-cE-ZCA"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="magn"/>
+                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-Ml-Ns0">
                         <rect key="frame" x="20" y="131" width="353" height="258"/>
@@ -109,6 +109,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="magn" width="128" height="128"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
     </resources>
 </document>

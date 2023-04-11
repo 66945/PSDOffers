@@ -1,7 +1,10 @@
 [
     {"details":["Proudly partners with PSD's ACE program and Work-Based Learning for students."],"name":"Cups Coffee","logoURL":"cupsCoffeeLogo","addresses": ["1033 S Taft Hill Rd, Fort Collins, CO"]},
     
-        
+    {"name":"American College of Education",
+        "logoURL":"americanCollegeLogo",
+        "details":["•    ACE is extremely excited to announce the launch of our B.A. in Education Studies that will start cohorts this January 2023. \n \n •    Poudre School District employees receive a discount towards programs at American College of Education \n \n•    Send a message to the email below for more information"],
+        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/KS%20March%202023%20Webinar%20w_QR.pdf","showName":"Webinar Flyer"}],"emailButtons": [{"address": "kerry.delaney@ace.edu"}]},
     ]
         
 
