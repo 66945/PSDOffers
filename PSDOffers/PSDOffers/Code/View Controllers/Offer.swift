@@ -26,6 +26,8 @@ struct Offer {
     
     var buttons: [UrlButton]?
     var emailButtons: [EmailButton]?
+    var categories: [Category]?
+
 }
 
 extension Offer {

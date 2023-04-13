@@ -8,7 +8,10 @@
 import UIKit
 
 class CategoryCell: UITableViewCell {
-
+    
+    @IBOutlet weak var check: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

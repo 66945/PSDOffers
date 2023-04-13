@@ -33,10 +33,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nuz-0I-wWT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet" catalog="system" id="Tac-Ay-5ta"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet" catalog="system" id="Tac-Ay-5ta">
+                            <connections>
+                                <segue destination="EFy-kp-7SJ" kind="popoverPresentation" popoverAnchorBarButtonItem="Tac-Ay-5ta" id="907-Ey-VHU">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="iV1-dk-Dgk" id="zgW-ZY-seE"/>
+                        <outlet property="offerButton" destination="Tac-Ay-5ta" id="pGf-Gj-FFi"/>
                         <segue destination="rNz-bU-mmD" kind="show" identifier="showOffer" id="M17-oQ-od0"/>
                     </connections>
                 </viewController>
@@ -159,6 +166,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D76-po-XPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="346" y="115"/>
+        </scene>
+        <!--Category List-->
+        <scene sceneID="XCg-gS-hub">
+            <objects>
+                <tableViewController id="EFy-kp-7SJ" customClass="CategoryList" customModule="PSDOffers" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uoF-s4-ipL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="EFy-kp-7SJ" id="8et-Qx-EQZ"/>
+                            <outlet property="delegate" destination="EFy-kp-7SJ" id="KGf-fv-FVe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Fay-Z5-kIs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1r-jF-fcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="768"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

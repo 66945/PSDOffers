@@ -19,10 +19,25 @@ class OfferPin: MKMarkerAnnotationView {
 class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var offerButton: UIBarButtonItem!
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     // var parks: [MKMapItem] = []
-    var offerings: [MKPointAnnotation] = []
+    var offerings: [OfferPoint] = []
+    var selectedOfferings: [OfferPoint] = []
+    var selectedCategory = Category.all
+    
+    func buildSelectedOfferings() {
+        if selectedCategory == .all {
+            selectedOfferings = offerings
+        } else {
+            selectedOfferings = offerings.filter{ $0.offer.categories?.contains(selectedCategory) ?? false }
+            
+        }
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        mapView.addAnnotations(selectedOfferings)
+    }
     
     func buildAnnotations() {
         for offer in Offer.offers {
@@ -77,11 +92,14 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         locationManager.startUpdatingLocation()
         mapView.delegate = self
         buildAnnotations()
+        buildSelectedOfferings()
         
         let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let center = CLLocationCoordinate2D(latitude: 40.57, longitude: -105.1)
         let region = MKCoordinateRegion(center: center, span: coordinateSpan)
         mapView.setRegion(region, animated: true)
+        
+        navigationItem.title = selectedCategory.title
         
     }
     
@@ -96,6 +114,13 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         if let vc = segue.destination as? OfferListTable {
             if let offer = sender as? Offer {
                 vc.offer = offer
+            }
+        } else if let vc = segue.destination as? CategoryList {
+            vc.delegate = self
+            vc.selectedCategory = selectedCategory
+            if let pop = vc.popoverPresentationController {
+                pop.delegate = self
+                pop.sourceItem = offerButton
             }
         }
     }
@@ -177,3 +202,18 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
 
+extension OfferMap: CategoryListProtocol {
+    func categorySelected(category: Category) {
+        navigationItem.title = category.title
+        selectedCategory = category
+        buildSelectedOfferings()
+    }
+    
+    
+}
+
+extension OfferMap: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+}

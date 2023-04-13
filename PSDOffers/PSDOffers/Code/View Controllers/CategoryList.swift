@@ -7,19 +7,36 @@
 
 import UIKit
 
-enum Category: Int, CaseIterable { case all, food, health, finances}
+enum Category: Int, CaseIterable { case all, food, health, finances, technology, retail}
 
+extension Category {
+    var title: String {
+        switch self {
+        case .all: return "All Offers"
+        default:
+            return "\(self)".capitalizingFirstLetter()
+        }
+    }
+}
+
+extension Category: Codable {
+    
+}
+
+protocol CategoryListProtocol: AnyObject {
+    func categorySelected(category: Category)
+}
 
 class CategoryList: UITableViewController {
 
+    var selectedCategory = Category.all
+    
+    weak var delegate: CategoryListProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
     }
 
     // MARK: - Table view data source
@@ -32,16 +49,28 @@ class CategoryList: UITableViewController {
         return Category.allCases.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as? CategoryCell {
+            
+            // Configure the cell...
+            let category = Category.allCases[indexPath.row]
+            cell.title.text =  category.title
+            cell.check.isHidden = category != selectedCategory
+            
+            return cell
+        }
+        return UITableViewCell()
     }
-    */
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let next = Category(rawValue: indexPath.row) {
+            selectedCategory = next
+            delegate?.categorySelected(category: next)
+            self.dismiss(animated: true)
+           // tableView.reloadData()
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
