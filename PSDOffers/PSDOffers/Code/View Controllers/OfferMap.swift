@@ -120,7 +120,12 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             vc.selectedCategory = selectedCategory
             if let pop = vc.popoverPresentationController {
                 pop.delegate = self
+                if #available(iOS 16, *) {
                 pop.sourceItem = offerButton
+            } else {
+                pop.barButtonItem = offerButton
+                
+                }
             }
         }
     }

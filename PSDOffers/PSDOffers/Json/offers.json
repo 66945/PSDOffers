@@ -64,6 +64,11 @@
         "logoURL":"activeFitLogo",
         "details":["The Active&Fit Direct program (link at the bottom) is designed to help you achieve better health through regular exercise without breaking the bank. The program includes a membership to 11,000+ participating fitness centers nationwide at just a fraction of average market prices ($25/month plus a $25 enrollment fee). \n \n For Active&Fit Direct participants: \n \n•    Prodigy Gym and Fitness PSD \n \n◦    10% discount \n \n◦    Enrollment fee waived through August \n \n◦    Three days trail period for PSD employees, spouses, and students \n \n◦    Punch passes: 10 admissions for $75 \n \n◦    As low as $29.00/month and Month to month - No contract options available"],
         "buttons": [{"url":"https://www.activeandfitdirect.com/fitness/AF791468PO","showName":"Active&Fit Direct Program"}, {"url":"https://www.activeandfitdirect.com/FAQ/","showName":"Frequently Asked Questions"}], "addresses": [""], "categories": [2]},
+    
+    {"details":["    •    PSD Employees, use GSTICKETS for upcoming events to receive a discount on a selection of upcoming events. Excludes Eagle's Games."],"name":"The Ranch","logoURL":"theRanchLogo"},
+    
+    {"details":["•    Poudre School District employees are now welcome to purchase a 25-Admission Multiple Facility Passes or Multiple Facility Admission Pass at the Corporate Pass Program rate at the following City of Fort Collins Recreation facilities: \n \n•    Edora Pool Ice Center: 1801 Riverside Ave \n \n•    Mulberry Pool: 424 W Mulberry St \n \n•    Northside Aztlan Community Center: 112 E Willow St \n \n•    Senior Center: 1200 Raintree Dr. \n \n•    Foothills Activity Center: 241 E Foothills Pkwy"],"name":"City of Fort Collins","logoURL":"cityOfFortCollinsLogo", "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Corporate%20Pass%20Rate%20Letter.pdf","showName":"Corporate Pass Program"}], "addresses": ["1801 Riverside Ave, Fort Collins, Colorado", "424 W Mulberry St, Fort Collins, Colorado","112 E Willow St, Fort Collins, Colorado","1200 Raintree Dr., Fort Collins, Colorado"], "categories": [2]},
+    
 ]
  
  
