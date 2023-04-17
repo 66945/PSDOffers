@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompactOfferCell" rowHeight="400" id="nfr-tk-Njj" customClass="OfferCell" customModule="PSDOffers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nfr-tk-Njj" id="xVn-v6-eSF">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqr-CQ-b6r">
+                        <rect key="frame" x="60" y="11.999999999999998" width="333" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGW-qr-g39">
+                        <rect key="frame" x="8" y="0.0" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="wOJ-tf-mOx"/>
+                            <constraint firstAttribute="width" constant="44" id="xz9-Ze-ytn"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="play.fill" catalog="system" symbolScale="small"/>
+                        </buttonConfiguration>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GEX-2U-GCk">
+                        <rect key="frame" x="20" y="55" width="353" height="334"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-WU-IjR">
+                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-Th-bix">
+                                <rect key="frame" x="0.0" y="20.333333333333332" width="353" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-MX-gpo">
+                                <rect key="frame" x="0.0" y="54.666666666666671" width="353" height="34.333333333333329"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-uS-fD8">
+                                <rect key="frame" x="0.0" y="89" width="353" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnD-WZ-adX">
+                                <rect key="frame" x="0.0" y="123.33333333333334" width="353" height="142.00000000000003"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHm-ml-vre">
+                                <rect key="frame" x="0.0" y="265.33333333333331" width="353" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlx-2C-Zbs">
+                                <rect key="frame" x="0.0" y="299.66666666666669" width="353" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="GEX-2U-GCk" secondAttribute="trailing" id="1ft-w2-ORU"/>
+                    <constraint firstAttribute="trailing" secondItem="Fqr-CQ-b6r" secondAttribute="trailing" id="7lm-3N-Mvt"/>
+                    <constraint firstItem="kGW-qr-g39" firstAttribute="leading" secondItem="xVn-v6-eSF" secondAttribute="leading" constant="8" id="CUm-4U-bwU"/>
+                    <constraint firstItem="Fqr-CQ-b6r" firstAttribute="top" secondItem="xVn-v6-eSF" secondAttribute="top" constant="12" id="Ke1-TX-K2j"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="GEX-2U-GCk" secondAttribute="bottom" priority="750" id="MuQ-e3-CzH"/>
+                    <constraint firstItem="GEX-2U-GCk" firstAttribute="leading" secondItem="xVn-v6-eSF" secondAttribute="leadingMargin" id="QoT-yx-Lfi"/>
+                    <constraint firstItem="Fqr-CQ-b6r" firstAttribute="leading" secondItem="kGW-qr-g39" secondAttribute="trailing" constant="8" id="fbm-gV-YeC"/>
+                    <constraint firstItem="kGW-qr-g39" firstAttribute="top" secondItem="xVn-v6-eSF" secondAttribute="top" id="iKF-16-WGB"/>
+                    <constraint firstItem="GEX-2U-GCk" firstAttribute="top" secondItem="xVn-v6-eSF" secondAttribute="topMargin" constant="44" id="y6c-X4-HHN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button1" destination="pEh-Th-bix" id="U0t-ip-nQn"/>
+                <outlet property="button2" destination="Ahk-MX-gpo" id="w2k-j0-7XR"/>
+                <outlet property="button3" destination="e5j-uS-fD8" id="ccg-EG-tt6"/>
+                <outlet property="emailButton1" destination="wnD-WZ-adX" id="Jer-7B-LPC"/>
+                <outlet property="emailButton2" destination="NHm-ml-vre" id="0kB-Vy-o0c"/>
+                <outlet property="emailButton3" destination="Dlx-2C-Zbs" id="Ykl-5J-nF5"/>
+                <outlet property="expandButton" destination="kGW-qr-g39" id="YXQ-hE-pRX"/>
+                <outlet property="name" destination="Fqr-CQ-b6r" id="axI-Yu-c5y"/>
+                <outlet property="offerLabel" destination="YDB-WU-IjR" id="ZUl-l2-e4K"/>
+            </connections>
+            <point key="canvasLocation" x="58.778625954198468" y="-292.25352112676057"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+    </resources>
+</document>

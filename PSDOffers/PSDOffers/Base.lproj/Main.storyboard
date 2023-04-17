@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YI9-l9-hAG">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -64,7 +65,21 @@
                             <outlet property="delegate" destination="HWt-ZR-4js" id="fLM-uW-uI0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PSD" id="SKJ-4O-VBt"/>
+                    <navigationItem key="navigationItem" title="PSD" id="SKJ-4O-VBt">
+                        <barButtonItem key="rightBarButtonItem" id="ZcC-t8-jlf">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="DuP-KH-gQ1">
+                                <rect key="frame" x="290" y="5.6666666666666679" width="87" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="text.below.photo" catalog="system"/>
+                                    <segment title="" image="list.bullet" catalog="system"/>
+                                </segments>
+                                <connections>
+                                    <action selector="listModeChanged:" destination="HWt-ZR-4js" eventType="valueChanged" id="uWS-gA-RCZ"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Mmh-b1-Fw8" kind="show" identifier="toWeb" id="rgp-Cr-Qr1"/>
                     </connections>
@@ -188,12 +203,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kic-t2-JL2"/>
+        <segue reference="rgp-Cr-Qr1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="map" catalog="system" width="128" height="112"/>
+        <image name="text.below.photo" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,10 +14,10 @@ protocol OfferCellProtocol: AnyObject {
 }
 
 class OfferCell: UITableViewCell {
-    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var logo: UIImageView?
     @IBOutlet weak var name: UILabel!
     
-    @IBOutlet weak var expandButton: UIButton!
+    @IBOutlet weak var expandButton: UIButton?
     @IBOutlet weak var offerLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -53,7 +53,7 @@ class OfferCell: UITableViewCell {
         let duration: TimeInterval = 0.5
         let nextExpanded = !isExpanded
         UIView.animate(withDuration: duration, animations: {
-            self.expandButton.transform = CGAffineTransformMakeRotation(nextExpanded ? .pi * 0.5 : 0)
+            self.expandButton?.transform = CGAffineTransformMakeRotation(nextExpanded ? .pi * 0.5 : 0)
         })
         DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: {
             self.delegate?.expandButtonPressedAt(indexPath: self.indexPath)
@@ -63,7 +63,7 @@ class OfferCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        expandButton.addTarget(self, action: #selector(expandButtonPressed), for: .touchUpInside)
+        expandButton?.addTarget(self, action: #selector(expandButtonPressed), for: .touchUpInside)
         
         let buttons = [button1, button2, button3]
         for (index, button) in buttons.enumerated() {
@@ -87,7 +87,7 @@ class OfferCell: UITableViewCell {
     func config(offer: Offer, isExpanded: Bool, indexPath: IndexPath, delegate: OfferCellProtocol) {
         self.offer = offer
         name.text = offer.name
-        logo.image = offer.logoImg
+        logo?.image = offer.logoImg
         offerLabel.text = offer.details?.first
         button1.setTitle("N/A", for: .normal)
         button1.isHidden = true
@@ -141,7 +141,7 @@ class OfferCell: UITableViewCell {
         self.delegate = delegate
         
         
-        expandButton.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
+        expandButton?.transform = CGAffineTransformMakeRotation(isExpanded ? .pi * 0.5 : 0)
     }
 }
 

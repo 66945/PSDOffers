@@ -16,7 +16,7 @@ class OfferListTable: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UINib(nibName: "OfferCell", bundle: nil), forCellReuseIdentifier: "OfferCell")
+        tableView.register(UINib(nibName: "MapOfferCell", bundle: nil), forCellReuseIdentifier: "MapOfferCell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,7 +37,7 @@ class OfferListTable: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "OfferCell", for: indexPath) as? OfferCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MapOfferCell", for: indexPath) as? OfferCell {
             cell.config(offer: offer,
                         isExpanded: true,
                         indexPath: indexPath,

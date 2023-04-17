@@ -10,13 +10,23 @@ import SafariServices
 import MessageUI
 
 class OfferList: UITableViewController {
-
+    
     var isExpanded: [Bool] = Array(repeating: false, count: Offer.offers.count)
+    var useCompact = false
+
+    @IBAction func listModeChanged(_ sender: UISegmentedControl) {
+        useCompact = sender.selectedSegmentIndex == 1
+        tableView.reloadData()
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "OfferCell", bundle: nil), forCellReuseIdentifier: "OfferCell")
+        tableView.register(UINib(nibName: "CompactOfferCell", bundle: nil), forCellReuseIdentifier: "CompactOfferCell")
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -48,12 +58,13 @@ class OfferList: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return isExpanded[indexPath.row] ? UITableView.automaticDimension : 124
+        let useHeight = useCompact ? 44.0 : 124.0
+        return isExpanded[indexPath.row] ? UITableView.automaticDimension : useHeight
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "OfferCell", for: indexPath) as? OfferCell {
+        let cellName = useCompact ? "CompactOfferCell" : "OfferCell"
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? OfferCell {
             cell.config(offer: Offer.offers[indexPath.row],
                         isExpanded: isExpanded[indexPath.row],
                         indexPath: indexPath,
