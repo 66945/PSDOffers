@@ -2,11 +2,11 @@
     {"details":["•    Proudly partners with PSD's ACE program and Work-Based Learning for students. \n \n•    Available to cater big events. Message the email below 72 hours before your event for an estimate. \n \n•    Ask about hosting our coffee cart at your school or picking up coffee travelers ($2-$8/person) and receive free 16oz drink vouchers for your staff. \n \n•    Nominate a PSD employee for a free coffee using the link below."],"name":"Cups Coffee","logoURL":"cupsCoffeeLogo","buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/CUPS%20Catering%20Options%20Winter%202023%20(1).pdf","showName":"Menu"},
         {"url":"https://cupstafthill.com/fort-collins-cups-community-coffee-cuplift","showName":"Cuplift Nomination"},
     {"url":"https://cupstafthill.com/","showName":"Main Website"}],
-        "emailButtons": [{"address": "cupstafthill@gmail.com"}], "addresses": ["1033 S Taft Hill Rd, Fort Collins, CO"], "categories": [1]},
+        "emailButtons": [{"address": "cupstafthill@gmail.com"}], "addresses": ["1033 S Taft Hill Rd, Fort Collins, CO"], "categories": ["food"]},
     
     {"details":["PSD employees are now eligible for membership."],"name":"Blue Federal Credit Union","logoURL":"blueFedLogo","addresses": ["181 W Boardwalk Dr, Fort Collins, CO","2261 E Drake Rd Suite 110, Fort Collins, CO","136 W Mountain Ave, Fort Collins, CO"]},
     
-    {"name":"Apple","logoURL":"appleLogo", "details":["Discounted prices for all educators on most Apple products on Apple's online store for educators: https://www.apple.com/us-hed/store"],"buttons": [{"url":"https:\/\/www.apple.com\/us-hed\/store","showName":"Apple"}], "categories": [4]},
+    {"name":"Apple","logoURL":"appleLogo", "details":["Discounted prices for all educators on most Apple products on Apple's online store for educators: https://www.apple.com/us-hed/store"],"buttons": [{"url":"https:\/\/www.apple.com\/us-hed\/store","showName":"Apple"}], "categories": ["technology"]},
     
     {"name":"Project Pizza", "logoURL":"projectPizzaLogo", "details":["Mention you work for PSD for $1.00 off any pizza.\n Able to cater big events."], "buttons": [{"url":"https://www.projectpizzaco.org","showName":"Project Pizza"}]},
     
@@ -27,7 +27,7 @@
     {"name":"Dell",
         "logoURL":"dellLogo",
         "details":["DELL EDUCATION MONTH is 10/1-10/31! Teachers, faculty and students can take advantage of an additional 10% off coupon."],
-        "buttons": [{"url":"https://www.dell.com/mpp/PoudreSD","showName":"Dell Offers"}],"emailButtons": [{"address": "jose_hidalgo@dell.com"}], "categories": [4]},
+        "buttons": [{"url":"https://www.dell.com/mpp/PoudreSD","showName":"Dell Offers"}],"emailButtons": [{"address": "jose_hidalgo@dell.com"}], "categories": ["technology"]},
     
     {"name":"Re/Max",
         "logoURL":"reMaxLogo",
@@ -48,26 +48,26 @@
     {"name":"Staples",
         "logoURL":"staplesLogo",
         "details":["Poudre School District receives low negotiated pricing with Staples, and PSD staff can too by registering for an individual account. A registration link and information on how to use StaplesAdvantage.com is available using the flier link below. \n For assistance, contact customer service at 877-826-7755 or using the Customer Support link below. \n \n• It takes approximately one to three business days to activate your registration. You'll receive a confirmation email from Staples Advantage to let you know when activation is complete. \n \n•    Order directly from StaplesAdvantage.com with your personal credit card, and your order will ship UPS® Ground right to your home."],
-        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Poudre%20School%20District-Staples%20Employee%20Purchase%20Program%20Details.pdf","showName":"Flier"}, {"url":"https://www.staplesadvantage.com/learn/contact-us/contact-us","showName":"Customer Support"}], "addresses": ["4333 Corbett Dr, Fort Collins, CO 80525"], "categories": [5]},
+        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Poudre%20School%20District-Staples%20Employee%20Purchase%20Program%20Details.pdf","showName":"Flier"}, {"url":"https://www.staplesadvantage.com/learn/contact-us/contact-us","showName":"Customer Support"}], "addresses": ["4333 Corbett Dr, Fort Collins, CO 80525"], "categories": ["retail"]},
     
     {"name":"Barnes & Noble",
         "logoURL":"barnesNobleLogo",
         "details":["All educators, administrators, and staff that work for Poudre School District are eligible for Barnes & Noble's 20% educator discount. Visit their convenient Fort Collins location and ask to fill out the educator discount application. \n \n•    Barnes & Noble offers a book curator who builds book lists and suggests titles that meet curriculum and classroom needs that align with both classic and current literary trends \n \n•    The Classwork link below is the online order website for schools and school districts to use for quote building and ordering direct from our warehouses. This site provides PSD the same discounting structure as previously stated above."],
-        "buttons": [{"url":"https://classwork.barnesandnoble.com/customer/user/login","showName":"Classwork"}], "addresses": ["4045 S College Ave, Fort Collins, CO 80525"], "categories": [5]},
+        "buttons": [{"url":"https://classwork.barnesandnoble.com/customer/user/login","showName":"Classwork"}], "addresses": ["4045 S College Ave, Fort Collins, CO 80525"], "categories": ["retail"]},
     
     {"name":"T Mobile",
         "logoURL":"tMobileLogo",
         "details":["    •    Poudre School District Employees receive a 15% discount on Magenta Max. This premium plan will include features like - Unlimited talk, text and data - Netflix On Us - 40GB mobile hotspot - Free stuff every week with T-Mobile Tuesdays – all with taxes and fees included. \n \n•    T-Mobile Work Perks (New T-Mobile Customers) – 1-855-570-9947 \n \n•    T-Mobile Work Perks (Existing T-Mobile Customers) – 1-877-334-7099 (restrictions apply) \n \n•    T-Mobile Customer Care – 1-800-937-8997"],
-        "buttons": [{"url":"https://now.t-mobile.com/government-employee-discounts.html?icid=TFB_TMO_U_VANITYBZIL_O6MW6BNB7SCJKROW921785","showName":"T Mobile Perks"}], "addresses": ["2948 Council Tree Ave Suite 131, Fort Collins, CO 80525", "238 E Harmony Rd D-7, Fort Collins, CO 80525", "3120 S College Ave #110, Fort Collins, CO 80525"], "categories": [4]},
+        "buttons": [{"url":"https://now.t-mobile.com/government-employee-discounts.html?icid=TFB_TMO_U_VANITYBZIL_O6MW6BNB7SCJKROW921785","showName":"T Mobile Perks"}], "addresses": ["2948 Council Tree Ave Suite 131, Fort Collins, CO 80525", "238 E Harmony Rd D-7, Fort Collins, CO 80525", "3120 S College Ave #110, Fort Collins, CO 80525"], "categories": ["technology"]},
     
     {"name":"Active&Fit Direct",
         "logoURL":"activeFitLogo",
         "details":["The Active&Fit Direct program (link at the bottom) is designed to help you achieve better health through regular exercise without breaking the bank. The program includes a membership to 11,000+ participating fitness centers nationwide at just a fraction of average market prices ($25/month plus a $25 enrollment fee). \n \n For Active&Fit Direct participants: \n \n•    Prodigy Gym and Fitness PSD \n \n◦    10% discount \n \n◦    Enrollment fee waived through August \n \n◦    Three days trail period for PSD employees, spouses, and students \n \n◦    Punch passes: 10 admissions for $75 \n \n◦    As low as $29.00/month and Month to month - No contract options available"],
-        "buttons": [{"url":"https://www.activeandfitdirect.com/fitness/AF791468PO","showName":"Active&Fit Direct Program"}, {"url":"https://www.activeandfitdirect.com/FAQ/","showName":"Frequently Asked Questions"}], "addresses": [""], "categories": [2]},
+        "buttons": [{"url":"https://www.activeandfitdirect.com/fitness/AF791468PO","showName":"Active&Fit Direct Program"}, {"url":"https://www.activeandfitdirect.com/FAQ/","showName":"Frequently Asked Questions"}], "addresses": [""], "categories": ["health"]},
     
     {"details":["    •    PSD Employees, use GSTICKETS for upcoming events to receive a discount on a selection of upcoming events. Excludes Eagle's Games."],"name":"The Ranch","logoURL":"theRanchLogo"},
     
-    {"details":["•    Poudre School District employees are now welcome to purchase a 25-Admission Multiple Facility Passes or Multiple Facility Admission Pass at the Corporate Pass Program rate at the following City of Fort Collins Recreation facilities: \n \n•    Edora Pool Ice Center: 1801 Riverside Ave \n \n•    Mulberry Pool: 424 W Mulberry St \n \n•    Northside Aztlan Community Center: 112 E Willow St \n \n•    Senior Center: 1200 Raintree Dr. \n \n•    Foothills Activity Center: 241 E Foothills Pkwy"],"name":"City of Fort Collins","logoURL":"cityOfFortCollinsLogo", "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Corporate%20Pass%20Rate%20Letter.pdf","showName":"Corporate Pass Program"}], "addresses": ["1801 Riverside Ave, Fort Collins, Colorado", "424 W Mulberry St, Fort Collins, Colorado","112 E Willow St, Fort Collins, Colorado","1200 Raintree Dr., Fort Collins, Colorado"], "categories": [2]},
+    {"details":["•    Poudre School District employees are now welcome to purchase a 25-Admission Multiple Facility Passes or Multiple Facility Admission Pass at the Corporate Pass Program rate at the following City of Fort Collins Recreation facilities: \n \n•    Edora Pool Ice Center: 1801 Riverside Ave \n \n•    Mulberry Pool: 424 W Mulberry St \n \n•    Northside Aztlan Community Center: 112 E Willow St \n \n•    Senior Center: 1200 Raintree Dr. \n \n•    Foothills Activity Center: 241 E Foothills Pkwy"],"name":"City of Fort Collins","logoURL":"cityOfFortCollinsLogo", "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Corporate%20Pass%20Rate%20Letter.pdf","showName":"Corporate Pass Program"}], "addresses": ["1801 Riverside Ave, Fort Collins, Colorado", "424 W Mulberry St, Fort Collins, Colorado","112 E Willow St, Fort Collins, Colorado","1200 Raintree Dr., Fort Collins, Colorado"], "categories": ["health"]},
     
 ]
  

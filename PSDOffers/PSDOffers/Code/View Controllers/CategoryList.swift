@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Category: Int, CaseIterable { case all, food, health, finances, technology, retail}
+enum Category: String, CaseIterable { case all, fincances, food, health, retail, technology}
 
 extension Category {
     var title: String {
@@ -64,12 +64,13 @@ class CategoryList: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let next = Category(rawValue: indexPath.row) {
+        let next = Category.allCases[indexPath.row]
+      //  if let next = Category(rawValue: indexPath.row) {
             selectedCategory = next
             delegate?.categorySelected(category: next)
             self.dismiss(animated: true)
            // tableView.reloadData()
-        }
+     //   }
     }
     /*
     // Override to support conditional editing of the table view.
