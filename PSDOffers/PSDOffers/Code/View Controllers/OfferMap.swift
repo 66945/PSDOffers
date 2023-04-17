@@ -31,7 +31,7 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         if selectedCategory == .all {
             selectedOfferings = offerings
         } else {
-            selectedOfferings = offerings.filter{ $0.offer.categories?.contains(selectedCategory) ?? false }
+            selectedOfferings = offerings.filter{ $0.offer.validCategories.contains(selectedCategory) }
             
         }
         let allAnnotations = self.mapView.annotations

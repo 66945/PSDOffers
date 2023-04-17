@@ -26,12 +26,26 @@ struct Offer {
     
     var buttons: [UrlButton]?
     var emailButtons: [EmailButton]?
-    var categories: [Category]?
+    var categories: [String]?
 
 }
 
 extension Offer {
     static var empty = Offer()
+    
+    var validCategories: [Category] {
+        var next: [Category] = []
+        if let cats = categories {
+            for category in cats {
+                if let category = Category(rawValue: category) {
+                    next.append(category)
+                }else{
+                    print("ERROR: Bad category: \(category)")
+                }
+            }
+        }
+        return next
+    }
     
     
     static var offers: [Offer] = [
