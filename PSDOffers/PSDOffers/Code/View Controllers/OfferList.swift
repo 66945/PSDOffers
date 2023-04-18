@@ -16,6 +16,7 @@ class OfferList: UITableViewController {
 
     @IBAction func listModeChanged(_ sender: UISegmentedControl) {
         useCompact = sender.selectedSegmentIndex == 1
+        isExpanded = Array(repeating: false, count: Offer.offers.count)
         tableView.reloadData()
     }
     

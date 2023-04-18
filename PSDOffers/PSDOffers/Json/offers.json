@@ -48,7 +48,7 @@
     {"name":"Staples",
         "logoURL":"staplesLogo",
         "details":["Poudre School District receives low negotiated pricing with Staples, and PSD staff can too by registering for an individual account. A registration link and information on how to use StaplesAdvantage.com is available using the flier link below. \n For assistance, contact customer service at 877-826-7755 or using the Customer Support link below. \n \n• It takes approximately one to three business days to activate your registration. You'll receive a confirmation email from Staples Advantage to let you know when activation is complete. \n \n•    Order directly from StaplesAdvantage.com with your personal credit card, and your order will ship UPS® Ground right to your home."],
-        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Poudre%20School%20District-Staples%20Employee%20Purchase%20Program%20Details.pdf","showName":"Flier"}, {"url":"https://www.staplesadvantage.com/learn/contact-us/contact-us","showName":"Customer Support"}], "addresses": ["4333 Corbett Dr, Fort Collins, CO 80525"], "categories": ["retail"]},
+        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Poudre%20School%20District-Staples%20Employee%20Purchase%20Program%20Details.pdf","showName":"Flier"}, {"url":"https://www.staplesadvantage.com/learn/contact-us/contact-us","showName":"Customer Support"}], "addresses": ["4333 Corbett Dr, Fort Collins, CO 80525"], "categories": ["retail", "technology"]},
     
     {"name":"Barnes & Noble",
         "logoURL":"barnesNobleLogo",
