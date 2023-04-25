@@ -150,12 +150,18 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 pin.canShowCallout = true
                 let button = UIButton(type: .detailDisclosure)
                 pin.rightCalloutAccessoryView = button
+                
+                #if targetEnvironment(simulator)
+                
                 let image = UIImage(systemName: "magnifyingglass")
                 let zoomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
                 pin.leftCalloutAccessoryView = zoomButton
                 zoomButton.setImage(image, for: .normal)
                 zoomButton.configuration = UIButton.Configuration.plain()
                 zoomButton.tag = 1
+                
+                #endif
+                
             }
             return pin
         }
