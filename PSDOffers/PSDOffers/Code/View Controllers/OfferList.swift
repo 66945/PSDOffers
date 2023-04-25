@@ -12,7 +12,7 @@ import MessageUI
 class OfferList: UITableViewController {
     
     var isExpanded: [Bool] = Array(repeating: false, count: Offer.offers.count)
-    var useCompact = false
+    var useCompact = true
 
     @IBAction func listModeChanged(_ sender: UISegmentedControl) {
         useCompact = sender.selectedSegmentIndex == 1
@@ -49,6 +49,7 @@ class OfferList: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -72,9 +73,11 @@ class OfferList: UITableViewController {
                         delegate: self)
             return cell
         }
+        
 
         return UITableViewCell()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? WebViewController, let urlString = sender as? String {
             if let url = URL(string: urlString) {
