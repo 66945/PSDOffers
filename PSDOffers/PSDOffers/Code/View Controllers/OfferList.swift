@@ -13,7 +13,7 @@ class OfferList: UITableViewController {
     
     var isExpanded: [Bool] = Array(repeating: false, count: Offer.offers.count)
     var useCompact = true
-
+    
     @IBAction func listModeChanged(_ sender: UISegmentedControl) {
         useCompact = sender.selectedSegmentIndex == 1
         isExpanded = Array(repeating: false, count: Offer.offers.count)
@@ -21,22 +21,22 @@ class OfferList: UITableViewController {
     }
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: "OfferCell", bundle: nil), forCellReuseIdentifier: "OfferCell")
         tableView.register(UINib(nibName: "CompactOfferCell", bundle: nil), forCellReuseIdentifier: "CompactOfferCell")
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-
+        
         let imgview = UIImageView(image: UIImage(named: "psdLogo"))
         imgview.contentMode = .scaleAspectFit
-            navigationItem.titleView = imgview
+        navigationItem.titleView = imgview
         
         
         if let json = Offer.offers.json {
@@ -47,23 +47,23 @@ class OfferList: UITableViewController {
         Offer.loadOffers()
         isExpanded = Array(repeating: false, count: Offer.offers.count)
     }
-
+    
     // MARK: - Table view data source
     
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Offer.offers.count
-    }
+    
+        override func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+    
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return Offer.offers.count
+        }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let useHeight = useCompact ? 44.0 : 124.0
         return isExpanded[indexPath.row] ? UITableView.automaticDimension : useHeight
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellName = useCompact ? "CompactOfferCell" : "OfferCell"
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? OfferCell {
@@ -74,7 +74,7 @@ class OfferList: UITableViewController {
             return cell
         }
         
-
+        
         return UITableViewCell()
     }
     
