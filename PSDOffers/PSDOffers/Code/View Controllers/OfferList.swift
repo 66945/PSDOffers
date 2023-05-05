@@ -15,7 +15,7 @@ class OfferList: UITableViewController {
     var useCompact = true
     
     @IBAction func listModeChanged(_ sender: UISegmentedControl) {
-        useCompact = sender.selectedSegmentIndex == 1
+        useCompact = sender.selectedSegmentIndex == 0
         isExpanded = Array(repeating: false, count: Offer.offers.count)
         tableView.reloadData()
     }
@@ -34,7 +34,7 @@ class OfferList: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let imgview = UIImageView(image: UIImage(named: "psdLogo"))
+        let imgview = UIImageView(image: UIImage(named: "")) // removed the psdLogo since it was off center
         imgview.contentMode = .scaleAspectFit
         navigationItem.titleView = imgview
         

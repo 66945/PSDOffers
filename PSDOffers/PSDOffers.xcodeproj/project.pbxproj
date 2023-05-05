@@ -32,6 +32,8 @@
 		AEF815A429AE71FC00E2BC4C /* PSDOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */; };
 		AEF815A629AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */; };
 		D03B62F129E466370097F71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8158B29AE71FB00E2BC4C /* Assets.xcassets */; };
+		D0488B5129FC23C70098916E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0488B5029FC23C70098916E /* HeaderView.swift */; };
+		D0488B5329FC23E90098916E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0488B5229FC23E90098916E /* HeaderView.xib */; };
 		D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05FB6B729C8C0140031F5C3 /* WebViewController.swift */; };
 		D093FF8529EEF169000C43E2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093FF8429EEF169000C43E2 /* InfoViewController.swift */; };
 		D093FF8729EEF243000C43E2 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093FF8629EEF243000C43E2 /* InfoCell.swift */; };
@@ -93,6 +95,8 @@
 		AEF8159F29AE71FB00E2BC4C /* PSDOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSDOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF815A329AE71FC00E2BC4C /* PSDOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITests.swift; sourceTree = "<group>"; };
 		AEF815A529AE71FC00E2BC4C /* PSDOffersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSDOffersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0488B5029FC23C70098916E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D0488B5229FC23E90098916E /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		D05FB6B729C8C0140031F5C3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D093FF8429EEF169000C43E2 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D093FF8629EEF243000C43E2 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				D0A4A60129EDA5D200A6D6DB /* CompactOfferCell.xib */,
 				D0A4A60329EDAA6200A6D6DB /* MapOfferCell.xib */,
 				D093FF8829EEF279000C43E2 /* InfoCell.xib */,
+				D0488B5229FC23E90098916E /* HeaderView.xib */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 		D0A4A5FC29E5B94200A6D6DB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D0488B5029FC23C70098916E /* HeaderView.swift */,
 				AEF1EADA29AFBD01009D3C63 /* OfferCell.swift */,
 				D0A4A5F729E5B78500A6D6DB /* CategoryCell.swift */,
 				D093FF8629EEF243000C43E2 /* InfoCell.swift */,
@@ -371,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0488B5329FC23E90098916E /* HeaderView.xib in Resources */,
 				6BC2A6DE29B10F58009BD1B1 /* blankish template copy 3.gpx in Resources */,
 				D093FF8929EEF279000C43E2 /* InfoCell.xib in Resources */,
 				6BC2A6DA29B10F58009BD1B1 /* Tmobile 2.gpx in Resources */,
@@ -426,6 +433,7 @@
 				AEF8158529AE71FA00E2BC4C /* SceneDelegate.swift in Sources */,
 				D05FB6B829C8C0140031F5C3 /* WebViewController.swift in Sources */,
 				D093FF8729EEF243000C43E2 /* InfoCell.swift in Sources */,
+				D0488B5129FC23C70098916E /* HeaderView.swift in Sources */,
 				D0A4A5F829E5B78500A6D6DB /* CategoryCell.swift in Sources */,
 				D093FF8529EEF169000C43E2 /* InfoViewController.swift in Sources */,
 				D0A4A60029E70D0D00A6D6DB /* ExtString.swift in Sources */,

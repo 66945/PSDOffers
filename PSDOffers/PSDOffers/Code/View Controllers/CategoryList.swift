@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Category: String, CaseIterable { case all, finance, food, health, retail, technology}
+enum Category: String, CaseIterable { case all, finance, food, health, retail, technology, education, service, entertainment}
 
 extension Category {
     var title: String {
