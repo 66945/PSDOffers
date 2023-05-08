@@ -52,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="1350.3816793893129" y="90.845070422535215"/>
         </scene>
-        <!--PSD-->
+        <!--All Offers-->
         <scene sceneID="FYD-NI-2KX">
             <objects>
                 <tableViewController id="HWt-ZR-4js" customClass="OfferList" customModule="PSDOffers" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,16 +66,24 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="PSD" id="SKJ-4O-VBt">
+                    <navigationItem key="navigationItem" title="All Offers" id="SKJ-4O-VBt">
                         <barButtonItem key="leftBarButtonItem" id="fOv-rD-4Zp">
                             <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
                             <connections>
                                 <segue destination="0hy-sk-csg" kind="show" id="fYc-R3-nAa"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet" catalog="system" id="iQQ-hg-moh">
+                            <connections>
+                                <segue destination="EFy-kp-7SJ" kind="popoverPresentation" popoverAnchorBarButtonItem="iQQ-hg-moh" id="DoE-Md-MUj">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="offerButton" destination="iQQ-hg-moh" id="dOH-Vd-GIZ"/>
                         <segue destination="Mmh-b1-Fw8" kind="show" identifier="toWeb" id="rgp-Cr-Qr1"/>
                     </connections>
                 </tableViewController>
@@ -217,6 +225,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="DoE-Md-MUj"/>
         <segue reference="rgp-Cr-Qr1"/>
     </inferredMetricsTieBreakers>
     <resources>

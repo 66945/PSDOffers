@@ -94,8 +94,8 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         buildAnnotations()
         buildSelectedOfferings()
         
-        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        let center = CLLocationCoordinate2D(latitude: 40.57, longitude: -105.1)
+        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+        let center = CLLocationCoordinate2D(latitude: 40.57, longitude: -105.078)
         let region = MKCoordinateRegion(center: center, span: coordinateSpan)
         mapView.setRegion(region, animated: true)
         

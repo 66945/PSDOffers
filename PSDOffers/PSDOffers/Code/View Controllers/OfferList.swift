@@ -11,15 +11,13 @@ import MessageUI
 
 class OfferList: UITableViewController {
     
+    @IBOutlet weak var offerButton: UIBarButtonItem!
+    
+    var selectedCategory = Category.all
+    var selectedOfferings: [Offer] = []
+    
     var isExpanded: [Bool] = Array(repeating: false, count: Offer.offers.count)
     var useCompact = true
-    
-    @IBAction func listModeChanged(_ sender: UISegmentedControl) {
-        useCompact = sender.selectedSegmentIndex == 0
-        isExpanded = Array(repeating: false, count: Offer.offers.count)
-        tableView.reloadData()
-    }
-    
     
     
     override func viewDidLoad() {
@@ -34,9 +32,9 @@ class OfferList: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let imgview = UIImageView(image: UIImage(named: "")) // removed the psdLogo since it was off center
-        imgview.contentMode = .scaleAspectFit
-        navigationItem.titleView = imgview
+//        let imgview = UIImageView(image: UIImage(named: "")) // removed the psdLogo since it was off center
+//        imgview.contentMode = .scaleAspectFit
+//        navigationItem.titleView = imgview
         
         
         if let json = Offer.offers.json {
@@ -45,19 +43,21 @@ class OfferList: UITableViewController {
             }
         }
         Offer.loadOffers()
+        selectedOfferings = Offer.offers
         isExpanded = Array(repeating: false, count: Offer.offers.count)
+        navigationItem.title = selectedCategory.title
     }
     
     // MARK: - Table view data source
     
     
-        override func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return Offer.offers.count
-        }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedOfferings.count
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let useHeight = useCompact ? 44.0 : 124.0
@@ -67,7 +67,7 @@ class OfferList: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellName = useCompact ? "CompactOfferCell" : "OfferCell"
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? OfferCell {
-            cell.config(offer: Offer.offers[indexPath.row],
+            cell.config(offer: selectedOfferings[indexPath.row],
                         isExpanded: isExpanded[indexPath.row],
                         indexPath: indexPath,
                         delegate: self)
@@ -82,6 +82,19 @@ class OfferList: UITableViewController {
         if let vc = segue.destination as? WebViewController, let urlString = sender as? String {
             if let url = URL(string: urlString) {
                 vc.configure(url: url)
+            }
+            
+        } else if let vc = segue.destination as? CategoryList {
+            vc.delegate = self
+            vc.selectedCategory = selectedCategory
+            if let pop = vc.popoverPresentationController {
+                pop.delegate = self
+                if #available(iOS 16, *) {
+                    pop.sourceItem = offerButton
+                } else {
+                    pop.barButtonItem = offerButton
+                    
+                }
             }
         }
     }
@@ -131,4 +144,31 @@ extension OfferList: OfferCellProtocol {
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 
+}
+
+extension OfferList: CategoryListProtocol {
+    func buildSelectedOfferings() {
+        if selectedCategory == .all {
+            selectedOfferings = Offer.offers
+        } else {
+            selectedOfferings = Offer.offers.filter{ $0.validCategories.contains(selectedCategory) }
+            
+        }
+        isExpanded = Array(repeating: false, count: Offer.offers.count)
+    }
+    func categorySelected(category: Category) {
+        navigationItem.title = category.title
+        selectedCategory = category
+        buildSelectedOfferings()
+        navigationItem.title = selectedCategory.title
+        tableView.reloadData()
+    }
+   
+    
+}
+
+extension OfferList: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
 }

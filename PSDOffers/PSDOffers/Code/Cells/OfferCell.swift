@@ -50,14 +50,15 @@ class OfferCell: UITableViewCell {
         }
     }
     @objc func expandButtonPressed() {
-        let duration: TimeInterval = 0.5
+       // let duration: TimeInterval = 0.2
         let nextExpanded = !isExpanded
-        UIView.animate(withDuration: duration, animations: {
-            self.expandButton?.transform = CGAffineTransformMakeRotation(nextExpanded ? .pi * 0.5 : 0)
-        })
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: {
-            self.delegate?.expandButtonPressedAt(indexPath: self.indexPath)
-        })
+//        UIView.animate(withDuration: duration, animations: {
+//            self.expandButton?.transform = CGAffineTransformMakeRotation(nextExpanded ? .pi * 0.5 : 0)
+//        })
+//        DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: {
+//            self.delegate?.expandButtonPressedAt(indexPath: self.indexPath)
+//        })
+        self.delegate?.expandButtonPressedAt(indexPath: self.indexPath)
     }
     
     override func awakeFromNib() {
