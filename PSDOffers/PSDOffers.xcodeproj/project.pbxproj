@@ -352,7 +352,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AEF8157A29AE71FA00E2BC4C /* Build configuration list for PBXProject "PSD Offers" */;
+			buildConfigurationList = AEF8157A29AE71FA00E2BC4C /* Build configuration list for PBXProject "PSDOffers" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -613,10 +613,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = RU4WD266ZD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PSDOffers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PSD Offers";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show where you are.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -645,10 +646,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = RU4WD266ZD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PSDOffers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PSD Offers";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show where you are.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -749,7 +751,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AEF8157A29AE71FA00E2BC4C /* Build configuration list for PBXProject "PSD Offers" */ = {
+		AEF8157A29AE71FA00E2BC4C /* Build configuration list for PBXProject "PSDOffers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AEF815A729AE71FC00E2BC4C /* Debug */,
