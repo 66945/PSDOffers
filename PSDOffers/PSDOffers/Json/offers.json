@@ -8,21 +8,21 @@
     
     {"name":"Apple","logoURL":"appleLogo", "details":["Discounted prices for all educators on most Apple products on Apple's online store for educators."],"buttons": [{"url":"https:\/\/www.apple.com\/us-hed\/store","showName":"Store for Educators"}], "categories": ["technology"]},
     
-    {"name":"Project Pizza", "logoURL":"projectPizzaLogo", "details":["Mention you work for PSD for $1.00 off any pizza. \nAble to cater big events."], "buttons": [{"url":"https://www.projectpizzaco.org","showName":"Project Pizza"}]},
+    {"name":"Project Pizza", "logoURL":"projectPizzaLogo", "details":["Mention you work for PSD for $1.00 off any pizza. \nAble to cater big events."], "buttons": [{"url":"https://www.projectpizzaco.org","showName":"Project Pizza"}], "categories": ["food"]},
     
     {"name":"Fat Tomato Food Truck", "logoURL":"fatTomatoLogo", "details":["10% discounts to all PSD staff and students for food truck events OR we can create a special discounted menu with meal packages for the day. \n \n 10% donation back to the school for any special events or fundraisers. \n \n Free delivery and setup on any drop catering orders within the district."], "buttons": [{"url":"https://fattomatoinc.com","showName":"Fat Tomato"},
         {"url":"https://fattomatoinc.com/catering","showName":"Catering Menu"},
-    {"url":"https://fattomatoinc.com/private-events","showName":"Private Events"}]},
+    {"url":"https://fattomatoinc.com/private-events","showName":"Private Events"}], "categories": ["food"]},
     
     {"name":"Beau Jo's Mountain Pies",
         "logoURL":"beauJo'sLogo",
         "details":["PSD employees can enjoy a 15% off all menu items. Just mention the Poudre School District discount."],
-        "buttons": [{"url":"https://www.beaujos.com/locations/fort-collins/","showName":"Beau Jo's Mountain Pies"}], "addresses": ["205 N College Ave, Fort Collins, CO"]},
+        "buttons": [{"url":"https://www.beaujos.com/locations/fort-collins/","showName":"Beau Jo's Mountain Pies"}], "addresses": ["205 N College Ave, Fort Collins, CO"], "categories": ["food"]},
     
     {"name":"Super Natural Eats",
         "logoURL":"superNaturalEats",
         "details":["PSD Employees get 15% off healthy meal services and delivery. \n \nUse code psd-wellness."],
-        "buttons": [{"url":"https://supernaturaleats.com","showName":"Super Natural Eats"}],"addresses": ["1801 S College Ave, Fort Collins, CO"]},
+        "buttons": [{"url":"https://supernaturaleats.com","showName":"Super Natural Eats"}],"addresses": ["1801 S College Ave, Fort Collins, CO"], "categories": ["food"]},
     
     {"name":"Dell",
         "logoURL":"dellLogo",
@@ -33,17 +33,17 @@
         "logoURL":"reMaxLogo",
         "details":["Complimentary Comparative Market Analysis (CMA) \n \nPSD Employees receive cash back at close of $1,000 for each transaction! \n \nFor each Real Estate Transaction closed with me, I will personally donate $250 to a PSD school of your choice! \n \nFor ANY non-employee transaction closed through a referral from a PSD employee, I’ll STILL donate $250 to a PSD school of choice of the individual closing the transaction! \n \nContact Mike White at: Mike@MyOwnColoradoHome.com \n \n970-294-6011 \n \nYou can also call our office (970-221-5995), visit at 1018 Centre Avenue, or reach out through our office website at ftcollinshomes.com"],
         "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Updated%20PSD%20Employee%20Flyer%20Spring%202023%20Loan%20Reg.pdf","showName":"PSD Promo Flyer"},
-        {"url":"https://www.ftcollinshomes.com","showName":"ftcollinshomes.com"}],"addresses": ["1018 Centre Avenue, Fort Collins, CO"]},
+        {"url":"https://www.ftcollinshomes.com","showName":"ftcollinshomes.com"}],"addresses": ["1018 Centre Avenue, Fort Collins, CO"], "categories": ["realestate"]},
     
     {"name":"Cross Country Mortgage",
         "logoURL":"crossCountryLogo",
         "details":["Poudre School District Employees receive a lender credit of up to $2,198* to offset closing costs when they work with CrossCountry Mortgage on a home purchase or refinance. \n \nTo get started, visit the website below, or call: \n \nRyan Lendrum at 720.990.3687 \n \nJacob Stewart at 970.218.1147 \n \nRemember: mention this offer when you call or simply apply online at the web address below."], "buttons": [{"url":"https://ccmaffinity.com/Poudre-Schools","showName":"Cross Country Mortgage"}, {"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/CO_Gray-Lendrum_Poudre_Affinity%20Intro%20Flyer_Stewart_AA.pdf","showName":"PSD Flyer"}],
-        "addresses": ["2108 Milestone Dr Suite 200, Fort Collins, CO"]},
+        "addresses": ["2108 Milestone Dr Suite 200, Fort Collins, CO"], "categories": ["realestate"]},
 
     {"name":"American College of Education",
         "logoURL":"americanCollegeLogo",
         "details":["Poudre School District employees receive a discount towards programs at American College of Education \n \nSend a message to the email below for more information"],
-        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/KS%20March%202023%20Webinar%20w_QR.pdf","showName":"Webinar Flyer"}],"emailButtons": [{"address": "kerry.delaney@ace.edu"}]},
+        "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/KS%20March%202023%20Webinar%20w_QR.pdf","showName":"Webinar Flyer"}],"emailButtons": [{"address": "kerry.delaney@ace.edu"}], "categories": ["education"]},
     
     {"name":"Staples",
         "logoURL":"staplesLogo",
@@ -58,14 +58,14 @@
     {"name":"T Mobile",
         "logoURL":"tMobileLogo",
         "details":["Poudre School District Employees receive a 15% discount on Magenta Max. This premium plan will include features like - Unlimited talk, text and data - Netflix On Us - 40GB mobile hotspot - Free stuff every week with T-Mobile Tuesdays – all with taxes and fees included. \n \nT-Mobile Work Perks (New T-Mobile Customers) – 1-855-570-9947 \n \nT-Mobile Work Perks (Existing T-Mobile Customers) – 1-877-334-7099 (restrictions apply) \n \nT-Mobile Customer Care – 1-800-937-8997"],
-        "buttons": [{"url":"https://now.t-mobile.com/government-employee-discounts.html?icid=TFB_TMO_U_VANITYBZIL_O6MW6BNB7SCJKROW921785","showName":"T Mobile Perks"}], "addresses": ["2948 Council Tree Ave Suite 131, Fort Collins, CO 80525", "238 E Harmony Rd D-7, Fort Collins, CO 80525", "3120 S College Ave #110, Fort Collins, CO 80525"], "categories": ["technology"]},
+        "buttons": [{"url":"https://now.t-mobile.com/government-employee-discounts.html?icid=TFB_TMO_U_VANITYBZIL_O6MW6BNB7SCJKROW921785","showName":"T Mobile Perks"}], "addresses": ["2948 Council Tree Ave Suite 131, Fort Collins, CO 80525", "238 E Harmony Rd D-7, Fort Collins, CO 80525", "3120 S College Ave #110, Fort Collins, CO 80525"], "categories": ["retail","technology"]},
     
     {"name":"Active&Fit Direct",
         "logoURL":"activeFitLogo",
         "details":["($25/month plus a $25 enrollment fee). \n \n For Active&Fit Direct participants: \n \nProdigy Gym and Fitness PSD \n \n10% discount \n \nEnrollment fee waived through August \n \nThree day trial period for PSD employees, spouses, and students \n \nPunch passes: 10 admissions for $75 \n \nAs low as $29.00/month and Month to month - No contract options available"],
         "buttons": [{"url":"https://www.activeandfitdirect.com/fitness/AF791468PO","showName":"Active&Fit Direct Program"}, {"url":"https://www.activeandfitdirect.com/FAQ/","showName":"Frequently Asked Questions"}], "addresses": [""], "categories": ["health"]},
     
-    {"details":["PSD Employees, use GSTICKETS for upcoming events to receive a discount on a selection of upcoming events. Excludes Eagle's Games."],"name":"The Ranch","logoURL":"theRanchLogo"},
+    {"details":["PSD Employees, use GSTICKETS for upcoming events to receive a discount on a selection of upcoming events. Excludes Eagle's Games."],"name":"The Ranch","logoURL":"theRanchLogo", "categories": ["entertainment"]},
     
     {"details":["Poudre School District employees can now purchase a 25-Admission Multiple Facility Pass or Multiple Facility Admission Pass at these facilities: \n \n • Edora Pool Ice Center: 1801 Riverside Ave \n \n • Mulberry Pool: 424 W Mulberry St \n \n • Northside Aztlan Community Center: 112 E Willow St \n \n • Senior Center: 1200 Raintree Dr. \n \n • Foothills Activity Center: 241 E Foothills Pkwy \n \nPlease bring your PSD ID Badge as a means of verifying your employment by the school district."],"name":"City of Fort Collins","logoURL":"cityOfFortCollinsLogo", "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Corporate%20Pass%20Rate%20Letter.pdf","showName":"Corporate Pass Program"}], "addresses": ["1801 Riverside Ave, Fort Collins, Colorado", "424 W Mulberry St, Fort Collins, Colorado","112 E Willow St, Fort Collins, Colorado","1200 Raintree Dr., Fort Collins, Colorado"], "categories": ["health"]},
     
@@ -105,7 +105,7 @@
     
     {"name":"Pursuit Fitness",
         "logoURL":"pfLogo",
-        "details":["One month free for PSD employees \n \nPSD Promo rate for new members"], "buttons": [{"url":"https://www.pursuit.fit/","showName":"Pursuit Fitness Website"}], "addresses": [""], "categories": ["health"]},
+        "details":["One month free for PSD employees \n \nPSD Promo rate for new members"], "buttons": [{"url":"https://www.pursuit.fit/","showName":"Pursuit Fitness Website"}], "addresses": ["4487 Bents Dr Unit B Windsor, CO 80550"], "categories": ["health"]},
     
     {"name":"Weed Man",
         "logoURL":"weedmanLogo",
@@ -113,11 +113,11 @@
     
     {"name":"Hearn's Footwear and Clothing",
         "logoURL":"hearnsLogo",
-        "details":["Hearne's provides a 10% discount on footwear (footwear only) to PSD staff"], "buttons": [{"url":"","showName":""}], "addresses": ["15 Old Town Square, Fort Collins, CO 80524"], "categories": ["Retail"]},
+        "details":["Hearne's provides a 10% discount on footwear (footwear only) to PSD staff"], "buttons": [{"url":"","showName":""}], "addresses": ["15 Old Town Square, Fort Collins, CO 80524"], "categories": ["retail"]},
     
     {"name":"Tribal Rites",
         "logoURL":"tribalRitesLogo",
-        "details":["Tribal Rites is more than happy to support local PSD teachers and educational staff! Get 20% off a single piece of jewelry $50 or under, or $10 off of any single piece of jewelry $50 or over. Just mention the PSD employee discount."], "buttons": [{"url":"","showName":""}], "addresses": ["628 S College Ave, Fort Collins, CO 80524"], "categories": ["Retail", "service"]},
+        "details":["Tribal Rites is more than happy to support local PSD teachers and educational staff! Get 20% off a single piece of jewelry $50 or under, or $10 off of any single piece of jewelry $50 or over. Just mention the PSD employee discount."], "buttons": [{"url":"","showName":""}], "addresses": ["628 S College Ave, Fort Collins, CO 80524"], "categories": ["retail", "service"]},
     
     {"name":"City of Fort Collins Recreation",
         "logoURL":"cofcrLogo",

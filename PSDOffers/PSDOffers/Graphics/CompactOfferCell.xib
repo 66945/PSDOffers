@@ -50,34 +50,46 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-Th-bix">
-                                <rect key="frame" x="0.0" y="20.333333333333332" width="353" height="34.333333333333343"/>
+                                <rect key="frame" x="0.0" y="20.333333333333329" width="353" height="28.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-MX-gpo">
-                                <rect key="frame" x="0.0" y="54.666666666666671" width="353" height="34.333333333333329"/>
+                                <rect key="frame" x="0.0" y="48.666666666666671" width="353" height="28.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-uS-fD8">
-                                <rect key="frame" x="0.0" y="89" width="353" height="34.333333333333343"/>
+                                <rect key="frame" x="0.0" y="77" width="353" height="28.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnD-WZ-adX">
-                                <rect key="frame" x="0.0" y="123.33333333333334" width="353" height="142.00000000000003"/>
+                                <rect key="frame" x="0.0" y="105.33333333333334" width="353" height="172.00000000000003"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHm-ml-vre">
-                                <rect key="frame" x="0.0" y="265.33333333333331" width="353" height="34.333333333333314"/>
+                                <rect key="frame" x="0.0" y="277.33333333333331" width="353" height="28.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlx-2C-Zbs">
-                                <rect key="frame" x="0.0" y="299.66666666666669" width="353" height="34.333333333333314"/>
+                                <rect key="frame" x="0.0" y="305.66666666666669" width="353" height="28.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                     </stackView>

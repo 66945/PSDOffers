@@ -51,7 +51,7 @@ class OfferCell: UITableViewCell {
     }
     @objc func expandButtonPressed() {
        // let duration: TimeInterval = 0.2
-        let nextExpanded = !isExpanded
+       // let nextExpanded = !isExpanded
 //        UIView.animate(withDuration: duration, animations: {
 //            self.expandButton?.transform = CGAffineTransformMakeRotation(nextExpanded ? .pi * 0.5 : 0)
 //        })

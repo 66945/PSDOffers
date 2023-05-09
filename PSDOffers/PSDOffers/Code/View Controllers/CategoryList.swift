@@ -7,12 +7,13 @@
 
 import UIKit
 
-enum Category: String, CaseIterable { case all, finance, food, health, retail, technology, education, service, entertainment}
+enum Category: String, CaseIterable { case all, education, entertainment, food, finance, health, retail, realestate, service, technology}
 
 extension Category {
     var title: String {
         switch self {
         case .all: return "All Offers"
+        case .realestate: return "Real Estate"
         default:
             return "\(self)".capitalizingFirstLetter()
         }
