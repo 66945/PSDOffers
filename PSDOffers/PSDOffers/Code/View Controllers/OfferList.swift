@@ -17,13 +17,12 @@ class OfferList: UITableViewController {
     var selectedOfferings: [Offer] = []
     
     var isExpanded: [Bool] = Array(repeating: false, count: Offer.offers.count)
-    var useCompact = true
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "OfferCell", bundle: nil), forCellReuseIdentifier: "OfferCell")
         tableView.register(UINib(nibName: "CompactOfferCell", bundle: nil), forCellReuseIdentifier: "CompactOfferCell")
         
         // Uncomment the following line to preserve selection between presentations
@@ -60,12 +59,12 @@ class OfferList: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let useHeight = useCompact ? 44.0 : 124.0
+        let useHeight = 44.0
         return isExpanded[indexPath.row] ? UITableView.automaticDimension : useHeight
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellName = useCompact ? "CompactOfferCell" : "OfferCell"
+        let cellName = "CompactOfferCell"
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? OfferCell {
             cell.config(offer: selectedOfferings[indexPath.row],
                         isExpanded: isExpanded[indexPath.row],
@@ -160,7 +159,7 @@ extension OfferList: CategoryListProtocol {
         navigationItem.title = category.title
         selectedCategory = category
         buildSelectedOfferings()
-        navigationItem.title = selectedCategory.title
+    //    navigationItem.title = selectedCategory.title
         tableView.reloadData()
     }
    

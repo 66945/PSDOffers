@@ -4,7 +4,7 @@
     {"url":"https://cupstafthill.com/","showName":"Main Website"}],
         "emailButtons": [{"address": "cupstafthill@gmail.com"}], "addresses": ["1033 S Taft Hill Rd, Fort Collins, CO"], "categories": ["food"]},
     
-    {"details":["PSD employees are now eligible for membership. \nVisit the Blue Federal website for details on memberships."],"name":"Blue Federal Credit Union","logoURL":"blueFedLogo", "buttons": [{"url":"https://www.bluefcu.com","showName":"Blue Federal Main Website"}], "emailButtons": [{"address": "kelli.stevens@bluefcu.com"}], "addresses": ["136 W Mountain Ave, Fort Collins, CO"], "categories": ["finance"]},
+    {"details":["PSD employees are now eligible for membership. \nVisit the Blue Federal website for details on memberships."],"name":"Blue Federal Credit Union","logoURL":"blueFedLogo", "buttons": [{"url":"https://www.bluefcu.com","showName":"Blue Federal Main Website"}], "emailButtons": [{"address": "kelli.stevens@bluefcu.com"}], "addresses": ["136 W Mountain Ave, Fort Collins, CO","181 W Boardwalk drive","2261 E Drake Rd Suite 110"], "categories": ["finance"]},
     
     {"name":"Apple","logoURL":"appleLogo", "details":["Discounted prices for all educators on most Apple products on Apple's online store for educators."],"buttons": [{"url":"https:\/\/www.apple.com\/us-hed\/store","showName":"Store for Educators"}], "categories": ["technology"]},
     

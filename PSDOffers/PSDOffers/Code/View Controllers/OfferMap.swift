@@ -51,6 +51,10 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                             anno.offer = offer
                             anno.offer.addressIndex = index
                             anno.title = offer.name
+                            if let address = offer.addresses?[index] {
+                                let addr2 = address.replacingOccurrences(of: "Fort Collins, CO.*", with: "", options: .regularExpression)
+                                anno.subtitle = addr2
+                            }
                             anno.coordinate = coordinate
                             self.offerings.append(anno)
                             self.mapView.addAnnotation(anno)
@@ -192,19 +196,19 @@ class OfferMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             } else if buttonPressed.buttonType == .detailDisclosure {
                 print("show details")
                 if let offerPin = view as? OfferPin {
-                   // performSegue(withIdentifier: "showOffer", sender: offerPin.offer)
-                    let title = offerPin.offer.name
-                    var message = ""
-                    if let index = offerPin.offer.addressIndex, let addresses = offerPin.offer.addresses {
-                        message = addresses[index]
-                    }
-                    
-                    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Show Offer", style: .default, handler: { _ in self.performSegue(withIdentifier: "showOffer", sender: offerPin.offer)}))
-                    
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                                    present(alert, animated: true, completion: nil)
+                   performSegue(withIdentifier: "showOffer", sender: offerPin.offer)
+//                    let title = offerPin.offer.name
+//                    var message = ""
+//                    if let index = offerPin.offer.addressIndex, let addresses = offerPin.offer.addresses {
+//                        message = addresses[index]
+//                    }
+//
+//                    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//
+//                    alert.addAction(UIAlertAction(title: "Show Offer", style: .default, handler: { _ in self.performSegue(withIdentifier: "showOffer", sender: offerPin.offer)}))
+//
+//                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+//                                    present(alert, animated: true, completion: nil)
                     
                 }
                 
