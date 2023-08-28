@@ -143,6 +143,14 @@
         "logoURL":"escapeLogo",
         "details":["PHS students have created 2 amazing Escape Rooms, Sinking Pirate Ship and Space Invasion \n \nTake your team for an experience that promotes team-building and leadership for only $10 per person \n \nRegister with the website link below or email escape970@yahoo.com to make an appointment to visit."], "buttons": [{"url":"https://www.psdschools.org/sites/default/files/PSD/partnership_volunteer_center/Images/Escape%20970%20Flyer.png","showName":"Escape Rooms"}, {"url":"https://www.psdschools.org/staff/employee-resources/www.escape970.com","showName":"Escape970 Website"}], "emailButtons": [{"address": "escape970@yahoo.com"}], "addresses": [""], "categories": ["entertainment"]},
     
+    {"name":"Lee Rose Aesthetics", "logoURL":"leeRoseAesthetics", "details":["$10/Unit for tox \n \n$100 off full syringes filler \n \n$50 dollars off half syringes filler \n \n20% off all skin care products online/in spa \n \nUse code: Poudre20 \n970-988-9248"], "buttons": [{"url":"https://www.leeroseaesthetics.com/","showName":"Lee Rose Aesthetics"}], "addresses": ["1507 Riverside Avenue Suite 200, Fort Collins, CO"], "categories": ["service"]},
+    
+    {"name":"All About Me Lash Extensions", "logoURL":"allAboutMeLashExtensions", "details":["20% off first time services \n \nLash Lifts and Tints \n \nLash Extensions \n \nBrow Laminations \n \n970-541-1097"], "buttons": [{"url":"","showName":"All About Me Lash Extensions"}], "addresses": ["1507 Riverside Avenue Suite 102, Fort Collins, CO"], "categories": ["service"]},
+    
+    {"name":"Trouve Hair Extensions", "logoURL":"trouveLogo", "details":["20% off hair extension installs \n \n10% off hair products \n \n970-342-6932"], "buttons": [{"url":"https://trouvecustomhairextensions.com/","showName":"Trouve Hair Extensions"}], "addresses": ["550 Moonglow Drive Windsor CO"], "categories": ["service"]},
+   
+   {"name":"NOCO Aesthetics", "logoURL":"nocoLogo", "details":["20% off first time services \n \n20% off all products \n \nCode: Poudre20 \n \n970-451-0107"], "buttons": [{"url":"https://www.nocoaestheticsstudio.com/","showName":"NOCO Aesthetics"}], "addresses": ["1720 Topaz Drive Loveland CO"], "categories": ["service"]},
+    
     
 ]
  
